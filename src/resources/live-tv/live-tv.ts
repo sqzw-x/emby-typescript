@@ -1,0 +1,892 @@
+// File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
+
+import { APIResource } from '../../core/resource';
+import * as ArtistsAPI from '../artists/artists';
+import * as ChannelMappingOptionsAPI from './channel-mapping-options';
+import {
+  ChannelMappingOptionCreateParams,
+  ChannelMappingOptionDeleteParams,
+  ChannelMappingOptionListParams,
+  ChannelMappingOptionUpdateParams,
+  ChannelMappingOptions,
+} from './channel-mapping-options';
+import * as ChannelMappingsAPI from './channel-mappings';
+import {
+  ChannelMappingCreateParams,
+  ChannelMappingDeleteParams,
+  ChannelMappingListParams,
+  ChannelMappingUpdateParams,
+  ChannelMappings,
+  SetChannelMapping,
+} from './channel-mappings';
+import * as ChannelTagsAPI from './channel-tags';
+import {
+  ChannelTagListParams,
+  ChannelTagListPrefixesParams,
+  ChannelTagListPrefixesResponse,
+  ChannelTags,
+} from './channel-tags';
+import * as ChannelsAPI from './channels';
+import { ChannelListParams, ChannelRetrieveParams, Channels } from './channels';
+import * as ProgramsAPI from './programs';
+import {
+  KeywordType,
+  ProgramCreateParams,
+  ProgramListParams,
+  ProgramListRecommendedParams,
+  Programs,
+} from './programs';
+import * as RecordingsAPI from './recordings';
+import {
+  RecordingListFoldersParams,
+  RecordingListFoldersResponse,
+  RecordingListParams,
+  RecordingRetrieveParams,
+  RecordingStatus,
+  Recordings,
+} from './recordings';
+import * as SeriesTimersAPI from './series-timers';
+import {
+  KeywordInfo,
+  SeriesTimerCreateParams,
+  SeriesTimerInfo,
+  SeriesTimerListParams,
+  SeriesTimerListResponse,
+  SeriesTimerUpdateParams,
+  SeriesTimers,
+  SortOrder,
+} from './series-timers';
+import * as TimersAPI from './timers';
+import {
+  KeepUntil,
+  SeriesTimerInfoDto,
+  TimerCreateParams,
+  TimerGetDefaultsParams,
+  TimerInfoDto,
+  TimerListParams,
+  TimerListResponse,
+  TimerUpdateParams,
+  Timers,
+} from './timers';
+import * as TunerHostsAPI from './tuner-hosts';
+import {
+  TunerHostCreateParams,
+  TunerHostDeleteParams,
+  TunerHostInfo,
+  TunerHostListResponse,
+  TunerHostListTypesResponse,
+  TunerHosts,
+} from './tuner-hosts';
+import * as TunersAPI from './tuners';
+import { TunerDiscoverResponse, Tuners } from './tuners';
+import * as ListingProvidersAPI from './listing-providers/listing-providers';
+import {
+  ListingProviderCreateParams,
+  ListingProviderDeleteParams,
+  ListingProviderDeleteProviderParams,
+  ListingProviderListAvailableResponse,
+  ListingProviderListLineupsParams,
+  ListingProviderListLineupsResponse,
+  ListingProviderListParams,
+  ListingProviderListResponse,
+  ListingProviders,
+  ListingsProviderInfo,
+} from './listing-providers/listing-providers';
+import * as LiveRecordingsAPI from './live-recordings/live-recordings';
+import { LiveRecordings } from './live-recordings/live-recordings';
+import * as LiveStreamFilesAPI from './live-stream-files/live-stream-files';
+import { LiveStreamFileRetrieveParams, LiveStreamFiles } from './live-stream-files/live-stream-files';
+import * as ManageAPI from './manage/manage';
+import { Manage } from './manage/manage';
+import { APIPromise } from '../../core/api-promise';
+import { RequestOptions } from '../../internal/request-options';
+
+export class LiveTv extends APIResource {
+  channelTags: ChannelTagsAPI.ChannelTags = new ChannelTagsAPI.ChannelTags(this._client);
+  channelMappings: ChannelMappingsAPI.ChannelMappings = new ChannelMappingsAPI.ChannelMappings(this._client);
+  channelMappingOptions: ChannelMappingOptionsAPI.ChannelMappingOptions =
+    new ChannelMappingOptionsAPI.ChannelMappingOptions(this._client);
+  listingProviders: ListingProvidersAPI.ListingProviders = new ListingProvidersAPI.ListingProviders(
+    this._client,
+  );
+  tunerHosts: TunerHostsAPI.TunerHosts = new TunerHostsAPI.TunerHosts(this._client);
+  channels: ChannelsAPI.Channels = new ChannelsAPI.Channels(this._client);
+  programs: ProgramsAPI.Programs = new ProgramsAPI.Programs(this._client);
+  recordings: RecordingsAPI.Recordings = new RecordingsAPI.Recordings(this._client);
+  timers: TimersAPI.Timers = new TimersAPI.Timers(this._client);
+  seriesTimers: SeriesTimersAPI.SeriesTimers = new SeriesTimersAPI.SeriesTimers(this._client);
+  manage: ManageAPI.Manage = new ManageAPI.Manage(this._client);
+  tuners: TunersAPI.Tuners = new TunersAPI.Tuners(this._client);
+  liveStreamFiles: LiveStreamFilesAPI.LiveStreamFiles = new LiveStreamFilesAPI.LiveStreamFiles(this._client);
+  liveRecordings: LiveRecordingsAPI.LiveRecordings = new LiveRecordingsAPI.LiveRecordings(this._client);
+
+  /**
+   * Requires authentication as user
+   */
+  listAvailableRecordingOptions(
+    options?: RequestOptions,
+  ): APIPromise<LiveTvListAvailableRecordingOptionsResponse> {
+    return this._client.get('/LiveTv/AvailableRecordingOptions', options);
+  }
+
+  /**
+   * Requires authentication as user
+   */
+  retrieveEpg(
+    query: LiveTvRetrieveEpgParams | null | undefined = {},
+    options?: RequestOptions,
+  ): APIPromise<LiveTvRetrieveEpgResponse> {
+    return this._client.get('/LiveTv/EPG', { query, ...options });
+  }
+
+  /**
+   * Requires authentication as user
+   */
+  retrieveFolder(options?: RequestOptions): APIPromise<ArtistsAPI.BaseItem> {
+    return this._client.get('/LiveTv/Folder', options);
+  }
+
+  /**
+   * Requires authentication as user
+   */
+  retrieveGuideInfo(options?: RequestOptions): APIPromise<LiveTvRetrieveGuideInfoResponse> {
+    return this._client.get('/LiveTv/GuideInfo', options);
+  }
+
+  /**
+   * Requires authentication as user
+   */
+  retrieveInfo(options?: RequestOptions): APIPromise<LiveTvRetrieveInfoResponse> {
+    return this._client.get('/LiveTv/Info', options);
+  }
+}
+
+export type ChannelType = 'TV' | 'Radio';
+
+export interface NameIDDescriptionPair {
+  Id?: string;
+
+  Name?: string;
+
+  ShortOverview?: string;
+}
+
+export interface LiveTvListAvailableRecordingOptionsResponse {
+  MovieRecordingFolders?: Array<NameIDDescriptionPair>;
+
+  RecordingFolders?: Array<NameIDDescriptionPair>;
+
+  SeriesRecordingFolders?: Array<NameIDDescriptionPair>;
+}
+
+export interface LiveTvRetrieveEpgResponse {
+  Items?: Array<LiveTvRetrieveEpgResponse.Item>;
+
+  TotalRecordCount?: number;
+}
+
+export namespace LiveTvRetrieveEpgResponse {
+  export interface Item {
+    Channel?: ArtistsAPI.BaseItem;
+
+    Programs?: Array<ArtistsAPI.BaseItem>;
+  }
+}
+
+export interface LiveTvRetrieveGuideInfoResponse {
+  EndDate?: string;
+
+  StartDate?: string;
+}
+
+export interface LiveTvRetrieveInfoResponse {
+  EnabledUsers?: Array<string>;
+
+  IsEnabled?: boolean;
+}
+
+export interface LiveTvRetrieveEpgParams {
+  /**
+   * Optional. Adds current program info to each channel
+   */
+  AddCurrentProgram?: boolean;
+
+  /**
+   * Optional. Return items that are siblings of a supplied item.
+   */
+  AdjacentTo?: string;
+
+  /**
+   * Gets all episodes that aired during a season, including specials.
+   */
+  AiredDuringSeason?: number | null;
+
+  /**
+   * Optional filter by items whose name is sorted equally or greater than a given
+   * input string.
+   */
+  AlbumArtistStartsWithOrGreater?: string;
+
+  /**
+   * Optional. If specified, results will be filtered based on album. This allows
+   * multiple, pipe delimeted.
+   */
+  Albums?: string;
+
+  /**
+   * Optional. If specified, result will be filtered to contain only items which
+   * match at least one of the specified IDs. Each provider ID must be in the form
+   * 'prov.id', e.g. 'imdb.tt123456'. This allows multiple, comma delimeted value
+   * pairs.
+   */
+  AnyProviderIdEquals?: string;
+
+  /**
+   * Optional. If specified, results will be filtered based on artist. This allows
+   * multiple, pipe delimeted.
+   */
+  ArtistIds?: string;
+
+  /**
+   * Optional. If specified, results will be filtered based on artist. This allows
+   * multiple, pipe delimeted.
+   */
+  Artists?: string;
+
+  /**
+   * Optional filter by items whose name is sorted equally or greater than a given
+   * input string.
+   */
+  ArtistStartsWithOrGreater?: string;
+
+  /**
+   * Artist or AlbumArtist
+   */
+  ArtistType?: string;
+
+  /**
+   * Optional filter by AudioCodec. Allows multiple, comma delimeted.
+   */
+  AudioCodecs?: string;
+
+  /**
+   * Optional filter by AudioLayout. Allows multiple, comma delimeted.
+   */
+  AudioLayouts?: string;
+
+  /**
+   * The channels to return guide information for.
+   */
+  ChannelIds?: string;
+
+  /**
+   * Optional filter by Container. Allows multiple, comma delimeted.
+   */
+  Containers?: string;
+
+  /**
+   * Incorporate favorite and like status into channel sorting.
+   */
+  EnableFavoriteSorting?: boolean;
+
+  /**
+   * Optional, include image information in output
+   */
+  EnableImages?: boolean | null;
+
+  /**
+   * Optional. The image types to include in the output.
+   */
+  EnableImageTypes?: string;
+
+  /**
+   * Optional, include user data
+   */
+  EnableUserData?: boolean | null;
+
+  /**
+   * Optional. If specified, results will be filtered by exxcluding item ids. This
+   * allows multiple, comma delimeted.
+   */
+  ExcludeItemIds?: string;
+
+  /**
+   * Optional. If specified, results will be filtered based on item type. This allows
+   * multiple, comma delimeted.
+   */
+  ExcludeItemTypes?: string;
+
+  /**
+   * Optional. If specified, results will be filtered based on tag. This allows
+   * multiple, pipe delimeted.
+   */
+  ExcludeTags?: string;
+
+  /**
+   * Optional filter by ExtendedVideoType. Allows multiple, comma delimeted.
+   */
+  ExtendedVideoTypes?: string;
+
+  /**
+   * Optional. Specify additional fields of information to return in the output. This
+   * allows multiple, comma delimeted. Options: Budget, Chapters, DateCreated,
+   * Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path,
+   * People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios,
+   * Taglines
+   */
+  Fields?: string;
+
+  /**
+   * Optional. Specify additional filters to apply. This allows multiple, comma
+   * delimeted. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite,
+   * IsResumable, Likes, Dislikes
+   */
+  Filters?: string;
+
+  /**
+   * Optional. If specified, results will be filtered based on genre. This allows
+   * multiple, pipe delimeted.
+   */
+  Genres?: string;
+
+  /**
+   * Whether or not to hide items behind their boxsets.
+   */
+  GroupItemsIntoCollections?: boolean;
+
+  /**
+   * Optional filter by items that have an imdb id or not.
+   */
+  HasImdbId?: boolean | null;
+
+  /**
+   * Optional filter by items that have official ratings
+   */
+  HasOfficialRating?: boolean | null;
+
+  /**
+   * Optional filter by items that have an overview or not.
+   */
+  HasOverview?: boolean | null;
+
+  /**
+   * Optional filter by items that have or do not have a parental rating
+   */
+  HasParentalRating?: boolean | null;
+
+  /**
+   * Optional filter by items with special features.
+   */
+  HasSpecialFeature?: boolean | null;
+
+  /**
+   * Optional filter by items with subtitles.
+   */
+  HasSubtitles?: boolean | null;
+
+  /**
+   * Optional filter by items with theme songs.
+   */
+  HasThemeSong?: boolean | null;
+
+  /**
+   * Optional filter by items with theme videos.
+   */
+  HasThemeVideo?: boolean | null;
+
+  /**
+   * Optional filter by items that have a tmdb id or not.
+   */
+  HasTmdbId?: boolean | null;
+
+  /**
+   * Optional filter by items with trailers.
+   */
+  HasTrailer?: boolean | null;
+
+  /**
+   * Optional filter by items that have a tvdb id or not.
+   */
+  HasTvdbId?: boolean | null;
+
+  /**
+   * Optional. If specific items are needed, specify a list of item id's to retrieve.
+   * This allows multiple, comma delimited.
+   */
+  Ids?: string;
+
+  /**
+   * Optional, the max number of images to return, per image type
+   */
+  ImageTypeLimit?: number | null;
+
+  /**
+   * Optional. If specified, results will be filtered based on those containing image
+   * types. This allows multiple, comma delimited.
+   */
+  ImageTypes?: string;
+
+  /**
+   * Optional. If specified, results will be filtered based on item type. This allows
+   * multiple, comma delimeted.
+   */
+  IncludeItemTypes?: string;
+
+  /**
+   * Optional filter by items that are 3D, or not.
+   */
+  Is3D?: boolean | null;
+
+  /**
+   * Filter by channels that are disliked, or not.
+   */
+  IsDisliked?: boolean | null;
+
+  /**
+   * Optional filter by items that are marked as favorite, or not.
+   */
+  IsFavorite?: boolean | null;
+
+  /**
+   * Optional filter for folders.
+   */
+  IsFolder?: boolean | null;
+
+  /**
+   * Optional filter by items that are HD or not.
+   */
+  IsHD?: boolean | null;
+
+  /**
+   * Optional filter for kids.
+   */
+  IsKids?: boolean | null;
+
+  /**
+   * Filter by channels that are liked, or not.
+   */
+  IsLiked?: boolean | null;
+
+  /**
+   * Optional filter by items that are locked.
+   */
+  IsLocked?: boolean | null;
+
+  /**
+   * Optional filter for movies.
+   */
+  IsMovie?: boolean | null;
+
+  /**
+   * Optional filter for IsNew.
+   */
+  IsNew?: boolean | null;
+
+  /**
+   * Optional filter for IsNewOrPremiere.
+   */
+  IsNewOrPremiere?: boolean | null;
+
+  /**
+   * Optional filter for news.
+   */
+  IsNews?: boolean | null;
+
+  /**
+   * Optional filter by items that are placeholders
+   */
+  IsPlaceHolder?: boolean | null;
+
+  /**
+   * Optional filter by items that are played, or not.
+   */
+  IsPlayed?: boolean | null;
+
+  /**
+   * Optional filter for IsPremiere.
+   */
+  IsPremiere?: boolean | null;
+
+  /**
+   * Optional filter for IsRepeat.
+   */
+  IsRepeat?: boolean | null;
+
+  /**
+   * Optional filter for series.
+   */
+  IsSeries?: boolean | null;
+
+  /**
+   * Optional filter for sports.
+   */
+  IsSports?: boolean | null;
+
+  /**
+   * Optional filter by items that are unaired episodes or not.
+   */
+  IsUnaired?: boolean | null;
+
+  /**
+   * Optional. The maximum number of records to return
+   */
+  Limit?: number | null;
+
+  /**
+   * Optional. The maximum premiere date. Format = ISO
+   */
+  MaxEndDate?: string;
+
+  /**
+   * Optional filter by maximum official rating (PG, PG-13, TV-MA, etc).
+   */
+  MaxOfficialRating?: string;
+
+  /**
+   * Optional filter by maximum number of game players.
+   */
+  MaxPlayers?: number | null;
+
+  /**
+   * Optional. The maximum premiere date. Format = ISO
+   */
+  MaxPremiereDate?: string;
+
+  /**
+   * Optional. The maximum premiere date. Format = ISO
+   */
+  MaxStartDate?: string;
+
+  /**
+   * Optional filter by MediaType. Allows multiple, comma delimited.
+   */
+  MediaTypes?: string;
+
+  /**
+   * Optional filter by minimum community rating.
+   */
+  MinCommunityRating?: number | null;
+
+  /**
+   * Optional filter by minimum critic rating.
+   */
+  MinCriticRating?: number | null;
+
+  /**
+   * Optional. The minimum premiere date. Format = ISO
+   */
+  MinDateLastSaved?: string;
+
+  /**
+   * Optional. The minimum premiere date. Format = ISO
+   */
+  MinDateLastSavedForUser?: string;
+
+  /**
+   * Optional. The minimum premiere date. Format = ISO
+   */
+  MinEndDate?: string;
+
+  /**
+   * Optional filter by minimum index number.
+   */
+  MinIndexNumber?: number | null;
+
+  /**
+   * Optional filter by minimum official rating (PG, PG-13, TV-MA, etc).
+   */
+  MinOfficialRating?: string;
+
+  /**
+   * Optional filter by minimum number of game players.
+   */
+  MinPlayers?: number | null;
+
+  /**
+   * Optional. The minimum premiere date. Format = ISO
+   */
+  MinPremiereDate?: string;
+
+  /**
+   * Optional. The minimum premiere date. Format = ISO
+   */
+  MinStartDate?: string;
+
+  /**
+   * Optional filter by items whose name is equally or lesser than a given input
+   * string.
+   */
+  NameLessThan?: string;
+
+  /**
+   * Optional filter by items whose name is sorted equally than a given input string.
+   */
+  NameStartsWith?: string;
+
+  /**
+   * Optional filter by items whose name is sorted equally or greater than a given
+   * input string.
+   */
+  NameStartsWithOrGreater?: string;
+
+  /**
+   * Optional. If specified, results will be filtered based on OfficialRating. This
+   * allows multiple, pipe delimeted.
+   */
+  OfficialRatings?: string;
+
+  /**
+   * Specify this to localize the search to a specific item or folder. Omit to use
+   * the root
+   */
+  ParentId?: string;
+
+  /**
+   * Optional filter by parent index number.
+   */
+  ParentIndexNumber?: number | null;
+
+  /**
+   * Optional filter by Path.
+   */
+  Path?: string;
+
+  /**
+   * Optional. If specified, results will be filtered to include only those
+   * containing the specified person.
+   */
+  Person?: string;
+
+  /**
+   * Optional. If specified, results will be filtered to include only those
+   * containing the specified person.
+   */
+  PersonIds?: string;
+
+  /**
+   * Optional. If specified, along with Person, results will be filtered to include
+   * only those containing the specified person and PersonType. Allows multiple,
+   * comma-delimited
+   */
+  PersonTypes?: string;
+
+  /**
+   * ProjectToMedia
+   */
+  ProjectToMedia?: boolean;
+
+  /**
+   * When searching within folders, this determines whether or not the search will be
+   * recursive. true/false
+   */
+  Recursive?: boolean;
+
+  /**
+   * Enter a search term to perform a search request
+   */
+  SearchTerm?: string;
+
+  /**
+   * Optional filter by Series Status. Allows multiple, comma delimeted.
+   */
+  SeriesStatus?: string;
+
+  /**
+   * Optional. Specify one or more sort orders, comma delimeted. Options: Album,
+   * AlbumArtist, Artist, Budget, CommunityRating, CriticRating, DateCreated,
+   * DatePlayed, PlayCount, PremiereDate, ProductionYear, SortName, Random, Revenue,
+   * Runtime
+   */
+  SortBy?: string;
+
+  /**
+   * Sort Order - Ascending,Descending
+   */
+  SortOrder?: string;
+
+  /**
+   * Optional. The record index to start at. All items with a lower index will be
+   * dropped from the results.
+   */
+  StartIndex?: number | null;
+
+  /**
+   * Optional. If specified, results will be filtered based on studio. This allows
+   * multiple, pipe delimeted.
+   */
+  StudioIds?: string;
+
+  /**
+   * Optional. If specified, results will be filtered based on studio. This allows
+   * multiple, pipe delimeted.
+   */
+  Studios?: string;
+
+  /**
+   * Optional filter by SubtitleCodec. Allows multiple, comma delimeted.
+   */
+  SubtitleCodecs?: string;
+
+  /**
+   * Optional. If specified, results will be filtered based on tag. This allows
+   * multiple, pipe delimeted.
+   */
+  Tags?: string;
+
+  /**
+   * Optional filter by channel type.
+   */
+  Type?: ChannelType;
+
+  /**
+   * User Id
+   */
+  UserId?: string;
+
+  /**
+   * Optional filter by VideoCodec. Allows multiple, comma delimeted.
+   */
+  VideoCodecs?: string;
+
+  /**
+   * Optional filter by VideoType (videofile, dvd, bluray, iso). Allows multiple,
+   * comma delimeted.
+   */
+  VideoTypes?: string;
+
+  /**
+   * Optional. If specified, results will be filtered based on production year. This
+   * allows multiple, comma delimeted.
+   */
+  Years?: string;
+}
+
+LiveTv.ChannelTags = ChannelTags;
+LiveTv.ChannelMappings = ChannelMappings;
+LiveTv.ChannelMappingOptions = ChannelMappingOptions;
+LiveTv.ListingProviders = ListingProviders;
+LiveTv.TunerHosts = TunerHosts;
+LiveTv.Channels = Channels;
+LiveTv.Programs = Programs;
+LiveTv.Recordings = Recordings;
+LiveTv.Timers = Timers;
+LiveTv.SeriesTimers = SeriesTimers;
+LiveTv.Manage = Manage;
+LiveTv.Tuners = Tuners;
+LiveTv.LiveStreamFiles = LiveStreamFiles;
+LiveTv.LiveRecordings = LiveRecordings;
+
+export declare namespace LiveTv {
+  export {
+    type ChannelType as ChannelType,
+    type NameIDDescriptionPair as NameIDDescriptionPair,
+    type LiveTvListAvailableRecordingOptionsResponse as LiveTvListAvailableRecordingOptionsResponse,
+    type LiveTvRetrieveEpgResponse as LiveTvRetrieveEpgResponse,
+    type LiveTvRetrieveGuideInfoResponse as LiveTvRetrieveGuideInfoResponse,
+    type LiveTvRetrieveInfoResponse as LiveTvRetrieveInfoResponse,
+    type LiveTvRetrieveEpgParams as LiveTvRetrieveEpgParams,
+  };
+
+  export {
+    ChannelTags as ChannelTags,
+    type ChannelTagListPrefixesResponse as ChannelTagListPrefixesResponse,
+    type ChannelTagListParams as ChannelTagListParams,
+    type ChannelTagListPrefixesParams as ChannelTagListPrefixesParams,
+  };
+
+  export {
+    ChannelMappings as ChannelMappings,
+    type SetChannelMapping as SetChannelMapping,
+    type ChannelMappingCreateParams as ChannelMappingCreateParams,
+    type ChannelMappingUpdateParams as ChannelMappingUpdateParams,
+    type ChannelMappingListParams as ChannelMappingListParams,
+    type ChannelMappingDeleteParams as ChannelMappingDeleteParams,
+  };
+
+  export {
+    ChannelMappingOptions as ChannelMappingOptions,
+    type ChannelMappingOptionCreateParams as ChannelMappingOptionCreateParams,
+    type ChannelMappingOptionUpdateParams as ChannelMappingOptionUpdateParams,
+    type ChannelMappingOptionListParams as ChannelMappingOptionListParams,
+    type ChannelMappingOptionDeleteParams as ChannelMappingOptionDeleteParams,
+  };
+
+  export {
+    ListingProviders as ListingProviders,
+    type ListingsProviderInfo as ListingsProviderInfo,
+    type ListingProviderListResponse as ListingProviderListResponse,
+    type ListingProviderListAvailableResponse as ListingProviderListAvailableResponse,
+    type ListingProviderListLineupsResponse as ListingProviderListLineupsResponse,
+    type ListingProviderCreateParams as ListingProviderCreateParams,
+    type ListingProviderListParams as ListingProviderListParams,
+    type ListingProviderDeleteParams as ListingProviderDeleteParams,
+    type ListingProviderDeleteProviderParams as ListingProviderDeleteProviderParams,
+    type ListingProviderListLineupsParams as ListingProviderListLineupsParams,
+  };
+
+  export {
+    TunerHosts as TunerHosts,
+    type TunerHostInfo as TunerHostInfo,
+    type TunerHostListResponse as TunerHostListResponse,
+    type TunerHostListTypesResponse as TunerHostListTypesResponse,
+    type TunerHostCreateParams as TunerHostCreateParams,
+    type TunerHostDeleteParams as TunerHostDeleteParams,
+  };
+
+  export {
+    Channels as Channels,
+    type ChannelRetrieveParams as ChannelRetrieveParams,
+    type ChannelListParams as ChannelListParams,
+  };
+
+  export {
+    Programs as Programs,
+    type KeywordType as KeywordType,
+    type ProgramCreateParams as ProgramCreateParams,
+    type ProgramListParams as ProgramListParams,
+    type ProgramListRecommendedParams as ProgramListRecommendedParams,
+  };
+
+  export {
+    Recordings as Recordings,
+    type RecordingStatus as RecordingStatus,
+    type RecordingListFoldersResponse as RecordingListFoldersResponse,
+    type RecordingRetrieveParams as RecordingRetrieveParams,
+    type RecordingListParams as RecordingListParams,
+    type RecordingListFoldersParams as RecordingListFoldersParams,
+  };
+
+  export {
+    Timers as Timers,
+    type KeepUntil as KeepUntil,
+    type SeriesTimerInfoDto as SeriesTimerInfoDto,
+    type TimerInfoDto as TimerInfoDto,
+    type TimerListResponse as TimerListResponse,
+    type TimerCreateParams as TimerCreateParams,
+    type TimerUpdateParams as TimerUpdateParams,
+    type TimerListParams as TimerListParams,
+    type TimerGetDefaultsParams as TimerGetDefaultsParams,
+  };
+
+  export {
+    SeriesTimers as SeriesTimers,
+    type KeywordInfo as KeywordInfo,
+    type SeriesTimerInfo as SeriesTimerInfo,
+    type SortOrder as SortOrder,
+    type SeriesTimerListResponse as SeriesTimerListResponse,
+    type SeriesTimerCreateParams as SeriesTimerCreateParams,
+    type SeriesTimerUpdateParams as SeriesTimerUpdateParams,
+    type SeriesTimerListParams as SeriesTimerListParams,
+  };
+
+  export { Manage as Manage };
+
+  export { Tuners as Tuners, type TunerDiscoverResponse as TunerDiscoverResponse };
+
+  export {
+    LiveStreamFiles as LiveStreamFiles,
+    type LiveStreamFileRetrieveParams as LiveStreamFileRetrieveParams,
+  };
+
+  export { LiveRecordings as LiveRecordings };
+}
