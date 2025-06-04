@@ -11,7 +11,7 @@ It is generated with [Stainless](https://www.stainless.com/).
 ## Installation
 
 ```sh
-npm install git+ssh://git@github.com:stainless-sdks/emby-typescript.git
+npm install git+ssh://git@github.com:sqzw-x/emby-typescript.git
 ```
 
 > [!NOTE]
@@ -29,13 +29,9 @@ const client = new Emby({
   apiKey: process.env['EMBY_API_KEY'], // This is the default and can be omitted
 });
 
-async function main() {
-  const queryResultBaseItem = await client.artists.list();
+const queryResultBaseItem = await client.artists.list();
 
-  console.log(queryResultBaseItem.Items);
-}
-
-main();
+console.log(queryResultBaseItem.Items);
 ```
 
 ### Request & Response types
@@ -50,11 +46,7 @@ const client = new Emby({
   apiKey: process.env['EMBY_API_KEY'], // This is the default and can be omitted
 });
 
-async function main() {
-  const queryResultBaseItem: Emby.QueryResultBaseItem = await client.artists.list();
-}
-
-main();
+const queryResultBaseItem: Emby.QueryResultBaseItem = await client.artists.list();
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -67,19 +59,15 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-async function main() {
-  const queryResultBaseItem = await client.artists.list().catch(async (err) => {
-    if (err instanceof Emby.APIError) {
-      console.log(err.status); // 400
-      console.log(err.name); // BadRequestError
-      console.log(err.headers); // {server: 'nginx', ...}
-    } else {
-      throw err;
-    }
-  });
-}
-
-main();
+const queryResultBaseItem = await client.artists.list().catch(async (err) => {
+  if (err instanceof Emby.APIError) {
+    console.log(err.status); // 400
+    console.log(err.name); // BadRequestError
+    console.log(err.headers); // {server: 'nginx', ...}
+  } else {
+    throw err;
+  }
+});
 ```
 
 Error codes are as follows:
@@ -348,7 +336,7 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
-We are keen for your feedback; please open an [issue](https://www.github.com/stainless-sdks/emby-typescript/issues) with questions, bugs, or suggestions.
+We are keen for your feedback; please open an [issue](https://www.github.com/sqzw-x/emby-typescript/issues) with questions, bugs, or suggestions.
 
 ## Requirements
 
