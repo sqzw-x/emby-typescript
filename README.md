@@ -29,13 +29,9 @@ const client = new Emby({
   apiKey: process.env['EMBY_API_KEY'], // This is the default and can be omitted
 });
 
-async function main() {
-  const queryResultBaseItem = await client.artists.list();
+const queryResultBaseItem = await client.artists.list();
 
-  console.log(queryResultBaseItem.Items);
-}
-
-main();
+console.log(queryResultBaseItem.Items);
 ```
 
 ### Request & Response types
@@ -50,11 +46,7 @@ const client = new Emby({
   apiKey: process.env['EMBY_API_KEY'], // This is the default and can be omitted
 });
 
-async function main() {
-  const queryResultBaseItem: Emby.QueryResultBaseItem = await client.artists.list();
-}
-
-main();
+const queryResultBaseItem: Emby.QueryResultBaseItem = await client.artists.list();
 ```
 
 Documentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.
@@ -67,19 +59,15 @@ a subclass of `APIError` will be thrown:
 
 <!-- prettier-ignore -->
 ```ts
-async function main() {
-  const queryResultBaseItem = await client.artists.list().catch(async (err) => {
-    if (err instanceof Emby.APIError) {
-      console.log(err.status); // 400
-      console.log(err.name); // BadRequestError
-      console.log(err.headers); // {server: 'nginx', ...}
-    } else {
-      throw err;
-    }
-  });
-}
-
-main();
+const queryResultBaseItem = await client.artists.list().catch(async (err) => {
+  if (err instanceof Emby.APIError) {
+    console.log(err.status); // 400
+    console.log(err.name); // BadRequestError
+    console.log(err.headers); // {server: 'nginx', ...}
+  } else {
+    throw err;
+  }
+});
 ```
 
 Error codes are as follows:
