@@ -336,10 +336,11 @@ import {
 
 export interface ClientOptions {
   /**
-   * **Emby User Authentication**
-   * An access token must be acquired via _/Users/AuthenticateByName_ and then sent in an http header with every reuest.
-   * For details please see the [API Documentation: Authentication](https://github.com/MediaBrowser/Emby/wiki/User-Authentication)
-   * **(not available for interative tryout)**
+   * **ApiKey Authentication**
+   * API keys are static access tokens providing access to the Emby API for external applications.
+   * Keys can be created from the Server Dashboard under **Advanced > Security**
+   * The api key can alternatively be specified in an http header named _X-Emby-Token_
+   * For details please see the [API Documentation: ApiKey Authentication](https://github.com/MediaBrowser/Emby/wiki/ApiKeyAuthentication)
    */
   apiKey?: string | undefined;
 
@@ -495,7 +496,10 @@ export class Emby {
   }
 
   protected defaultQuery(): Record<string, string | undefined> | undefined {
-    return this._options.defaultQuery;
+    return {
+      api_key: this.apiKey,
+      ...this._options.defaultQuery,
+    };
   }
 
   protected validateHeaders({ values, nulls }: NullableHeaders) {
@@ -503,7 +507,7 @@ export class Emby {
   }
 
   protected authHeaders(opts: FinalRequestOptions): NullableHeaders | undefined {
-    return buildHeaders([{ Authorization: `Bearer ${this.apiKey}` }]);
+    return buildHeaders([]);
   }
 
   protected stringifyQuery(query: Record<string, unknown>): string {
