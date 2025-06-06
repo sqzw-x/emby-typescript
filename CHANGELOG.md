@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.1 (2025-06-06)
+
+Full Changelog: [v0.0.1-alpha.1...v0.1.0-alpha.1](https://github.com/sqzw-x/emby-typescript/compare/v0.0.1-alpha.1...v0.1.0-alpha.1)
+
+### Features
+
+* **api:** update via SDK Studio ([27f59f0](https://github.com/sqzw-x/emby-typescript/commit/27f59f00621d1bd820757216712fb712c84b78b5))
+
 ## 0.0.1-alpha.1 (2025-06-04)
 
 Full Changelog: [v0.0.1-alpha.0...v0.0.1-alpha.1](https://github.com/sqzw-x/emby-typescript/compare/v0.0.1-alpha.0...v0.0.1-alpha.1)
