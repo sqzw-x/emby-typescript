@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "emby/*": ["dist/src/*"],
-      "emby": ["dist/src/index.ts"]
+      "emby-sdk-stainless/*": ["dist/src/*"],
+      "emby-sdk-stainless": ["dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,

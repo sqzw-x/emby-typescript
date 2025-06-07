@@ -25,7 +25,7 @@ export default tseslint.config(
         {
           patterns: [
             {
-              regex: '^emby(/.*)?',
+              regex: '^emby-sdk-stainless(/.*)?',
               message: 'Use a relative import, not a package import.',
             },
           ],

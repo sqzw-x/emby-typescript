@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Emby from 'emby';
+import Emby from 'emby-sdk-stainless';
 
 const client = new Emby({
   apiKey: 'My API Key',

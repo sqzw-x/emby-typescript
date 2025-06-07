@@ -1,4 +1,4 @@
-import { createPathTagFunction, encodeURIPath } from 'emby/internal/utils/path';
+import { createPathTagFunction, encodeURIPath } from 'emby-sdk-stainless/internal/utils/path';
 import { inspect } from 'node:util';
 
 describe('path template tag function', () => {
