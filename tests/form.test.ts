@@ -1,5 +1,5 @@
-import { multipartFormRequestOptions, createForm } from 'emby/internal/uploads';
-import { toFile } from 'emby/core/uploads';
+import { multipartFormRequestOptions, createForm } from 'emby-sdk-stainless/internal/uploads';
+import { toFile } from 'emby-sdk-stainless/core/uploads';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {

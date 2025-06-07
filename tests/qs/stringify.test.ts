@@ -1,7 +1,7 @@
 import iconv from 'iconv-lite';
-import { stringify } from 'emby/internal/qs';
-import { encode } from 'emby/internal/qs/utils';
-import { StringifyOptions } from 'emby/internal/qs/types';
+import { stringify } from 'emby-sdk-stainless/internal/qs';
+import { encode } from 'emby-sdk-stainless/internal/qs/utils';
+import { StringifyOptions } from 'emby-sdk-stainless/internal/qs/types';
 import { empty_test_cases } from './empty-keys-cases';
 import assert from 'assert';
 
