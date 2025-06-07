@@ -1,10 +1,10 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIPromise } from 'emby/core/api-promise';
+import { APIPromise } from 'emby-sdk-stainless/core/api-promise';
 
 import util from 'node:util';
-import Emby from 'emby';
-import { APIUserAbortError } from 'emby';
+import Emby from 'emby-sdk-stainless';
+import { APIUserAbortError } from 'emby-sdk-stainless';
 const defaultFetch = fetch;
 
 describe('instantiate client', () => {
