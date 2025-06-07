@@ -1,5 +1,5 @@
 {
-  "name": "emby",
+  "name": "emby-sdk-stainless",
   "version": "0.1.0-alpha.2",
   "description": "The official TypeScript library for the Emby API",
   "author": "Emby <>",
@@ -47,8 +47,8 @@
     "typescript": "5.8.3"
   },
   "imports": {
-    "emby": ".",
-    "emby/*": "./src/*"
+    "emby-sdk-stainless": ".",
+    "emby-sdk-stainless/*": "./src/*"
   },
   "exports": {
     ".": {

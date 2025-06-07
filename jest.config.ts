@@ -7,8 +7,8 @@ const config: JestConfigWithTsJest = {
     '^.+\\.(t|j)sx?$': ['@swc/jest', { sourceMaps: 'inline' }],
   },
   moduleNameMapper: {
-    '^emby$': '<rootDir>/src/index.ts',
-    '^emby/(.*)$': '<rootDir>/src/$1',
+    '^emby-sdk-stainless$': '<rootDir>/src/index.ts',
+    '^emby-sdk-stainless/(.*)$': '<rootDir>/src/$1',
   },
   modulePathIgnorePatterns: [
     '<rootDir>/ecosystem-tests/',
