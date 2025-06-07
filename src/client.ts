@@ -496,10 +496,7 @@ export class Emby {
   }
 
   protected defaultQuery(): Record<string, string | undefined> | undefined {
-    return {
-      api_key: this.apiKey,
-      ...this._options.defaultQuery,
-    };
+    return this._options.defaultQuery;
   }
 
   protected validateHeaders({ values, nulls }: NullableHeaders) {
@@ -507,7 +504,7 @@ export class Emby {
   }
 
   protected authHeaders(opts: FinalRequestOptions): NullableHeaders | undefined {
-    return buildHeaders([]);
+    return buildHeaders([{ 'X-Emby-Token': this.apiKey }]);
   }
 
   protected stringifyQuery(query: Record<string, unknown>): string {
