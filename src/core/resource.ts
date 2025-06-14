@@ -2,7 +2,7 @@
 
 import type { Emby } from '../client';
 
-export class APIResource {
+export abstract class APIResource {
   protected _client: Emby;
 
   constructor(client: Emby) {
