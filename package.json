@@ -1,6 +1,6 @@
 {
   "name": "emby-sdk-stainless",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The official TypeScript library for the Emby API",
   "author": "Emby <>",
   "types": "dist/index.d.ts",
