@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.1 (2025-06-14)
+
+Full Changelog: [v0.1.0...v0.1.1](https://github.com/sqzw-x/emby-typescript/compare/v0.1.0...v0.1.1)
+
+### Bug Fixes
+
+* publish script — handle NPM errors correctly ([7acc2d3](https://github.com/sqzw-x/emby-typescript/commit/7acc2d34e79b66897450b80a2ddd105ce1b9f3d3))
+
+
+### Chores
+
+* **internal:** add pure annotations, make base APIResource abstract ([822d70a](https://github.com/sqzw-x/emby-typescript/commit/822d70afb384b41c5f974b3bab8786cba5040308))
+
 ## 0.1.0 (2025-06-07)
 
 Full Changelog: [v0.1.0-alpha.2...v0.1.0](https://github.com/sqzw-x/emby-typescript/compare/v0.1.0-alpha.2...v0.1.0)
