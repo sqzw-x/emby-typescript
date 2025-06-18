@@ -1,6 +1,6 @@
 # Emby TypeScript API Library
 
-[![NPM version](https://img.shields.io/npm/v/emby-sdk-stainless.svg)](https://npmjs.org/package/emby-sdk-stainless) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/emby-sdk-stainless)
+[![NPM version](<https://img.shields.io/npm/v/emby-sdk-stainless.svg?label=npm%20(stable)>)](https://npmjs.org/package/emby-sdk-stainless) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/emby-sdk-stainless)
 
 This library provides convenient access to the Emby REST API from server-side TypeScript or JavaScript.
 
