@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.2.0 (2025-06-21)
+
+Full Changelog: [v0.1.1...v0.2.0](https://github.com/sqzw-x/emby-typescript/compare/v0.1.1...v0.2.0)
+
+### Features
+
+* **client:** add support for endpoint-specific base URLs ([98f5835](https://github.com/sqzw-x/emby-typescript/commit/98f583567daed5851259dfa78fd1f8dc43c822ee))
+
+
+### Bug Fixes
+
+* **client:** explicitly copy fetch in withOptions ([87525fa](https://github.com/sqzw-x/emby-typescript/commit/87525fa09ac7ef0eeb7820084ada923480e9b118))
+
+
+### Chores
+
+* **ci:** enable for pull requests ([c7db7a0](https://github.com/sqzw-x/emby-typescript/commit/c7db7a023a33853a31acaa13161eaa3166db1ec5))
+* **client:** refactor imports ([c842381](https://github.com/sqzw-x/emby-typescript/commit/c8423818655fb02cd7e9896bf1ba1418547808cc))
+* **readme:** update badges ([1945aa0](https://github.com/sqzw-x/emby-typescript/commit/1945aa0787fc87732e34627faf411bbbe040f6c1))
+* **readme:** use better example snippet for undocumented params ([4f97972](https://github.com/sqzw-x/emby-typescript/commit/4f979728dd782ea890029d91b2b3e5ec53d7ad29))
+
 ## 0.1.1 (2025-06-14)
 
 Full Changelog: [v0.1.0...v0.1.1](https://github.com/sqzw-x/emby-typescript/compare/v0.1.0...v0.1.1)
