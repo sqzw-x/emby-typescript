@@ -131,7 +131,7 @@ export interface MediaSourceInfo {
    */
   ReadAtNativeFramerate?: boolean;
 
-  RequiredHttpHeaders?: Record<string, string>;
+  RequiredHttpHeaders?: { [key: string]: string };
 
   RequiresClosing?: boolean;
 

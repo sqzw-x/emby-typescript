@@ -106,7 +106,7 @@ export interface SeriesTimerInfo {
 
   ProgramId?: string;
 
-  ProviderIds?: Record<string, string>;
+  ProviderIds?: { [key: string]: string };
 
   RecordAnyTime?: boolean;
 
@@ -170,7 +170,7 @@ export interface SeriesTimerCreateParams {
 
   ProgramId?: string;
 
-  ProviderIds?: Record<string, string>;
+  ProviderIds?: { [key: string]: string };
 
   RecordAnyTime?: boolean;
 
@@ -226,7 +226,7 @@ export interface SeriesTimerUpdateParams {
 
   ProgramId?: string;
 
-  ProviderIds?: Record<string, string>;
+  ProviderIds?: { [key: string]: string };
 
   RecordAnyTime?: boolean;
 

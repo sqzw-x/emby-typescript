@@ -90,7 +90,7 @@ export interface SeriesTimerInfoDto {
 
   Id?: string;
 
-  ImageTags?: Record<string, string>;
+  ImageTags?: { [key: string]: string };
 
   IsPostPaddingRequired?: boolean;
 

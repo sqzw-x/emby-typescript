@@ -35,7 +35,7 @@ export class Command extends APIResource {
 }
 
 export interface CommandIssueCommandParams {
-  Arguments?: Record<string, string>;
+  Arguments?: { [key: string]: string };
 
   ControllingUserId?: string;
 
