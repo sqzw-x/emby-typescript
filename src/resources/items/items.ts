@@ -578,7 +578,7 @@ export interface ItemUpdateParams {
     | 'RightBottom'
     | 'LeftBottom';
 
-  ImageTags?: Record<string, string>;
+  ImageTags?: { [key: string]: string };
 
   IndexNumber?: number | null;
 
@@ -715,7 +715,7 @@ export interface ItemUpdateParams {
 
   ProductionYear?: number | null;
 
-  ProviderIds?: Record<string, string>;
+  ProviderIds?: { [key: string]: string };
 
   RecursiveItemCount?: number | null;
 

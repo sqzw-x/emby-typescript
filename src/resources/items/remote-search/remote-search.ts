@@ -172,7 +172,7 @@ export interface RemoteSearchResult {
 
   ProductionYear?: number | null;
 
-  ProviderIds?: Record<string, string>;
+  ProviderIds?: { [key: string]: string };
 
   SearchProviderName?: string;
 
@@ -282,7 +282,7 @@ export interface RemoteSearchApplySearchParams {
   /**
    * Body param:
    */
-  ProviderIds?: Record<string, string>;
+  ProviderIds?: { [key: string]: string };
 
   /**
    * Body param:
@@ -337,7 +337,7 @@ export namespace RemoteSearchCreateBookParams {
 
     PremiereDate?: string | null;
 
-    ProviderIds?: Record<string, string>;
+    ProviderIds?: { [key: string]: string };
 
     SeriesName?: string;
 
@@ -377,7 +377,7 @@ export namespace RemoteSearchCreateBoxSetParams {
 
     PremiereDate?: string | null;
 
-    ProviderIds?: Record<string, string>;
+    ProviderIds?: { [key: string]: string };
 
     Year?: number | null;
   }
@@ -415,7 +415,7 @@ export namespace RemoteSearchCreateGameParams {
 
     PremiereDate?: string | null;
 
-    ProviderIds?: Record<string, string>;
+    ProviderIds?: { [key: string]: string };
 
     Year?: number | null;
   }
@@ -453,7 +453,7 @@ export namespace RemoteSearchCreateMovieParams {
 
     PremiereDate?: string | null;
 
-    ProviderIds?: Record<string, string>;
+    ProviderIds?: { [key: string]: string };
 
     Year?: number | null;
   }
@@ -493,7 +493,7 @@ export namespace RemoteSearchCreateMusicAlbumParams {
 
     PremiereDate?: string | null;
 
-    ProviderIds?: Record<string, string>;
+    ProviderIds?: { [key: string]: string };
 
     SongInfos?: Array<SearchInfo.SongInfo>;
 
@@ -528,7 +528,7 @@ export namespace RemoteSearchCreateMusicAlbumParams {
 
       PremiereDate?: string | null;
 
-      ProviderIds?: Record<string, string>;
+      ProviderIds?: { [key: string]: string };
 
       Year?: number | null;
     }
@@ -567,7 +567,7 @@ export namespace RemoteSearchCreateMusicArtistParams {
 
     PremiereDate?: string | null;
 
-    ProviderIds?: Record<string, string>;
+    ProviderIds?: { [key: string]: string };
 
     Year?: number | null;
   }
@@ -607,7 +607,7 @@ export namespace RemoteSearchCreateMusicVideoParams {
 
     PremiereDate?: string | null;
 
-    ProviderIds?: Record<string, string>;
+    ProviderIds?: { [key: string]: string };
 
     Year?: number | null;
   }
@@ -645,7 +645,7 @@ export namespace RemoteSearchCreatePersonParams {
 
     PremiereDate?: string | null;
 
-    ProviderIds?: Record<string, string>;
+    ProviderIds?: { [key: string]: string };
 
     Year?: number | null;
   }
@@ -687,7 +687,7 @@ export namespace RemoteSearchCreateSeriesParams {
 
     PremiereDate?: string | null;
 
-    ProviderIds?: Record<string, string>;
+    ProviderIds?: { [key: string]: string };
 
     Year?: number | null;
   }
@@ -725,7 +725,7 @@ export namespace RemoteSearchCreateTrailerParams {
 
     PremiereDate?: string | null;
 
-    ProviderIds?: Record<string, string>;
+    ProviderIds?: { [key: string]: string };
 
     Year?: number | null;
   }
