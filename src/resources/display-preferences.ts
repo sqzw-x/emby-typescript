@@ -40,7 +40,7 @@ export class DisplayPreferences extends APIResource {
 export interface DisplayPreference {
   Client?: string;
 
-  CustomPrefs?: Record<string, string>;
+  CustomPrefs?: { [key: string]: string };
 
   Id?: string;
 
@@ -75,7 +75,7 @@ export interface DisplayPreferenceUpdateParams {
   /**
    * Body param:
    */
-  CustomPrefs?: Record<string, string>;
+  CustomPrefs?: { [key: string]: string };
 
   /**
    * Body param:

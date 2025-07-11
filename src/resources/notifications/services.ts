@@ -44,7 +44,7 @@ export interface UserNotificationInfo {
 
   NotifierKey?: string;
 
-  Options?: Record<string, string>;
+  Options?: { [key: string]: string };
 
   PluginId?: string;
 
@@ -76,7 +76,7 @@ export interface ServiceSendTestParams {
 
   NotifierKey?: string;
 
-  Options?: Record<string, string>;
+  Options?: { [key: string]: string };
 
   PluginId?: string;
 
