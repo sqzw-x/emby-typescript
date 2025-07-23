@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.1 (2025-07-17)
+
+Full Changelog: [v0.2.0...v0.2.1](https://github.com/sqzw-x/emby-typescript/compare/v0.2.0...v0.2.1)
+
+### Chores
+
+* **ts:** reorder package.json imports ([c023682](https://github.com/sqzw-x/emby-typescript/commit/c0236829ef72736ad7587ce7cdc2ec2e1c788c69))
+
 ## 0.2.0 (2025-07-10)
 
 Full Changelog: [v0.1.1...v0.2.0](https://github.com/sqzw-x/emby-typescript/compare/v0.1.1...v0.2.0)
