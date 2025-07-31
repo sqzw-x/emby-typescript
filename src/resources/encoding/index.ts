@@ -8,10 +8,5 @@ export {
   type EncodingGetCodecInformationVideoResponse,
   type EncodingGetToneMapOptionsResponse,
   type EncodingGetCodecParametersParams,
-  type EncodingUpdateCodecParametersParams,
-  type EncodingUpdateFfmpegOptionsParams,
-  type EncodingUpdateFullToneMapOptionsParams,
-  type EncodingUpdatePublicToneMapOptionsParams,
-  type EncodingUpdateSubtitleOptionsParams,
 } from './encoding';
 export { FullToneMapOptions, type EditObjectContainer, type EditorTypes } from './full-tone-map-options';

@@ -18,8 +18,6 @@ import {
   ImageType,
   ImageUpdateIndexParams,
   ImageUpdateURLParams,
-  ImageUploadByTypeAndIndexParams,
-  ImageUploadParams,
   Images,
 } from './images';
 import * as MetadataAPI from './metadata';
@@ -2378,8 +2376,6 @@ export declare namespace Items {
     type ImageRetrieveDetailedParams as ImageRetrieveDetailedParams,
     type ImageUpdateIndexParams as ImageUpdateIndexParams,
     type ImageUpdateURLParams as ImageUpdateURLParams,
-    type ImageUploadParams as ImageUploadParams,
-    type ImageUploadByTypeAndIndexParams as ImageUploadByTypeAndIndexParams,
   };
 
   export {

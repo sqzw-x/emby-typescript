@@ -22,12 +22,9 @@ describe('resource cameraUploads', () => {
 
   // skipped: tests are disabled for the time being
   test.skip('upload: only required params', async () => {
-    const responsePromise = client.devices.cameraUploads.upload({
-      Album: 'Album',
-      Id: 'Id',
-      Name: 'Name',
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+    const responsePromise = client.devices.cameraUploads.upload(
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+    );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -39,11 +36,9 @@ describe('resource cameraUploads', () => {
 
   // skipped: tests are disabled for the time being
   test.skip('upload: required and optional params', async () => {
-    const response = await client.devices.cameraUploads.upload({
-      Album: 'Album',
-      Id: 'Id',
-      Name: 'Name',
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+    const response = await client.devices.cameraUploads.upload(
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+      { Album: 'Album', Id: 'Id', Name: 'Name' },
+    );
   });
 });

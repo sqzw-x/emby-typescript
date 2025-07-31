@@ -6,12 +6,7 @@ import * as AuthAPI from '../auth/auth';
 import * as ItemsAPI from '../items/items';
 import * as SessionsAPI from '../sessions/sessions';
 import * as ConfigurationAPI from './configuration';
-import {
-  Configuration,
-  ConfigurationUpdateParams,
-  ConfigurationUpdatePartialParams,
-  UserConfiguration,
-} from './configuration';
+import { Configuration, ConfigurationUpdateParams, UserConfiguration } from './configuration';
 import * as FavoriteItemsAPI from './favorite-items';
 import {
   FavoriteItemDeleteParams,
@@ -41,11 +36,11 @@ import {
 import * as TrackSelectionsAPI from './track-selections';
 import { TrackSelectionDeleteParams, TrackSelections } from './track-selections';
 import * as TypedSettingsAPI from './typed-settings';
-import { TypedSettingRetrieveParams, TypedSettingUpdateParams, TypedSettings } from './typed-settings';
+import { TypedSettingRetrieveParams, TypedSettings } from './typed-settings';
 import * as ConnectAPI from './connect/connect';
 import { Connect } from './connect/connect';
 import * as ImagesAPI from './images/images';
-import { ImageRetrieveParams, ImageUpdateParams, Images } from './images/images';
+import { ImageRetrieveParams, Images } from './images/images';
 import * as ItemsItemsAPI from './items/items';
 import {
   ItemHideFromResumeParams,
@@ -816,7 +811,6 @@ export declare namespace Users {
     Configuration as Configuration,
     type UserConfiguration as UserConfiguration,
     type ConfigurationUpdateParams as ConfigurationUpdateParams,
-    type ConfigurationUpdatePartialParams as ConfigurationUpdatePartialParams,
   };
 
   export {
@@ -840,11 +834,7 @@ export declare namespace Users {
     type TrackSelectionDeleteParams as TrackSelectionDeleteParams,
   };
 
-  export {
-    TypedSettings as TypedSettings,
-    type TypedSettingRetrieveParams as TypedSettingRetrieveParams,
-    type TypedSettingUpdateParams as TypedSettingUpdateParams,
-  };
+  export { TypedSettings as TypedSettings, type TypedSettingRetrieveParams as TypedSettingRetrieveParams };
 
   export {
     FavoriteItems as FavoriteItems,
@@ -853,11 +843,7 @@ export declare namespace Users {
     type FavoriteItemDeleteParams as FavoriteItemDeleteParams,
   };
 
-  export {
-    Images as Images,
-    type ImageRetrieveParams as ImageRetrieveParams,
-    type ImageUpdateParams as ImageUpdateParams,
-  };
+  export { Images as Images, type ImageRetrieveParams as ImageRetrieveParams };
 
   export {
     PlayedItems as PlayedItems,

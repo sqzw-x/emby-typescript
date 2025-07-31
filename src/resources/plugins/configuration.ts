@@ -20,8 +20,11 @@ export class Configuration extends APIResource {
   /**
    * Requires authentication as administrator
    */
-  update(id: string, params: ConfigurationUpdateParams, options?: RequestOptions): APIPromise<void> {
-    const { body } = params;
+  update(
+    id: string,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    options?: RequestOptions,
+  ): APIPromise<void> {
     return this._client.post(path`/Plugins/${id}/Configuration`, {
       body: body,
       ...options,
@@ -31,12 +34,4 @@ export class Configuration extends APIResource {
       ]),
     });
   }
-}
-
-export interface ConfigurationUpdateParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
-export declare namespace Configuration {
-  export { type ConfigurationUpdateParams as ConfigurationUpdateParams };
 }

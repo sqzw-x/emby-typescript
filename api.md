@@ -105,7 +105,7 @@ Types:
 Methods:
 
 - <code title="get /Devices/CameraUploads">client.devices.cameraUploads.<a href="./src/resources/devices/camera-uploads.ts">list</a>() -> CameraUploadListResponse</code>
-- <code title="post /Devices/CameraUploads">client.devices.cameraUploads.<a href="./src/resources/devices/camera-uploads.ts">upload</a>({ ...params }) -> void</code>
+- <code title="post /Devices/CameraUploads">client.devices.cameraUploads.<a href="./src/resources/devices/camera-uploads.ts">upload</a>(body, { ...params }) -> void</code>
 
 # ExtendedVideoTypes
 
@@ -214,8 +214,8 @@ Methods:
 - <code title="get /Items/{Id}/Images/{Type}/{Index}/{Tag}/{Format}/{MaxWidth}/{MaxHeight}/{PercentPlayed}/{UnPlayedCount}">client.items.images.<a href="./src/resources/items/images.ts">retrieveDetailed</a>(unPlayedCount, { ...params }) -> void</code>
 - <code title="post /Items/{Id}/Images/{Type}/{Index}/Index">client.items.images.<a href="./src/resources/items/images.ts">updateIndex</a>(index, { ...params }) -> void</code>
 - <code title="post /Items/{Id}/Images/{Type}/{Index}/Url">client.items.images.<a href="./src/resources/items/images.ts">updateURL</a>(index, { ...params }) -> void</code>
-- <code title="post /Items/{Id}/Images/{Type}">client.items.images.<a href="./src/resources/items/images.ts">upload</a>(type, { ...params }) -> void</code>
-- <code title="post /Items/{Id}/Images/{Type}/{Index}">client.items.images.<a href="./src/resources/items/images.ts">uploadByTypeAndIndex</a>(index, { ...params }) -> void</code>
+- <code title="post /Items/{Id}/Images/{Type}">client.items.images.<a href="./src/resources/items/images.ts">upload</a>(type, body, { ...params }) -> void</code>
+- <code title="post /Items/{Id}/Images/{Type}/{Index}">client.items.images.<a href="./src/resources/items/images.ts">uploadByTypeAndIndex</a>(index, body, { ...params }) -> void</code>
 
 ## RemoteSearch
 
@@ -451,7 +451,7 @@ Methods:
 Methods:
 
 - <code title="get /Plugins/{Id}/Configuration">client.plugins.configuration.<a href="./src/resources/plugins/configuration.ts">retrieve</a>(id) -> void</code>
-- <code title="post /Plugins/{Id}/Configuration">client.plugins.configuration.<a href="./src/resources/plugins/configuration.ts">update</a>(id, { ...params }) -> void</code>
+- <code title="post /Plugins/{Id}/Configuration">client.plugins.configuration.<a href="./src/resources/plugins/configuration.ts">update</a>(id, body) -> void</code>
 
 # ScheduledTasks
 
@@ -716,7 +716,7 @@ Methods:
 Methods:
 
 - <code title="get /Dlna/{UuId}/contentdirectory/contentdirectory">client.dlna.contentdirectory.<a href="./src/resources/dlna/contentdirectory.ts">retrieve</a>(uuID) -> void</code>
-- <code title="post /Dlna/{UuId}/contentdirectory/control">client.dlna.contentdirectory.<a href="./src/resources/dlna/contentdirectory.ts">processControl</a>(uuID, { ...params }) -> void</code>
+- <code title="post /Dlna/{UuId}/contentdirectory/control">client.dlna.contentdirectory.<a href="./src/resources/dlna/contentdirectory.ts">processControl</a>(uuID, body) -> void</code>
 - <code title="get /Dlna/{UuId}/contentdirectory/contentdirectory.xml">client.dlna.contentdirectory.<a href="./src/resources/dlna/contentdirectory.ts">retrieveXml</a>(uuID) -> void</code>
 
 ## Connectionmanager
@@ -724,7 +724,7 @@ Methods:
 Methods:
 
 - <code title="get /Dlna/{UuId}/connectionmanager/connectionmanager">client.dlna.connectionmanager.<a href="./src/resources/dlna/connectionmanager.ts">retrieve</a>(uuID) -> void</code>
-- <code title="post /Dlna/{UuId}/connectionmanager/control">client.dlna.connectionmanager.<a href="./src/resources/dlna/connectionmanager.ts">processControl</a>(uuID, { ...params }) -> void</code>
+- <code title="post /Dlna/{UuId}/connectionmanager/control">client.dlna.connectionmanager.<a href="./src/resources/dlna/connectionmanager.ts">processControl</a>(uuID, body) -> void</code>
 - <code title="get /Dlna/{UuId}/connectionmanager/connectionmanager.xml">client.dlna.connectionmanager.<a href="./src/resources/dlna/connectionmanager.ts">retrieveXml</a>(uuID) -> void</code>
 
 # Encoding
@@ -745,11 +745,11 @@ Methods:
 - <code title="get /Encoding/PublicToneMapOptions">client.encoding.<a href="./src/resources/encoding/encoding.ts">getPublicToneMapOptions</a>() -> EditObjectContainer</code>
 - <code title="get /Encoding/SubtitleOptions">client.encoding.<a href="./src/resources/encoding/encoding.ts">getSubtitleOptions</a>() -> EditObjectContainer</code>
 - <code title="get /Encoding/ToneMapOptions">client.encoding.<a href="./src/resources/encoding/encoding.ts">getToneMapOptions</a>() -> EncodingGetToneMapOptionsResponse</code>
-- <code title="post /Encoding/CodecParameters">client.encoding.<a href="./src/resources/encoding/encoding.ts">updateCodecParameters</a>({ ...params }) -> void</code>
-- <code title="post /Encoding/FfmpegOptions">client.encoding.<a href="./src/resources/encoding/encoding.ts">updateFfmpegOptions</a>({ ...params }) -> void</code>
-- <code title="post /Encoding/FullToneMapOptions">client.encoding.<a href="./src/resources/encoding/encoding.ts">updateFullToneMapOptions</a>({ ...params }) -> void</code>
-- <code title="post /Encoding/PublicToneMapOptions">client.encoding.<a href="./src/resources/encoding/encoding.ts">updatePublicToneMapOptions</a>({ ...params }) -> void</code>
-- <code title="post /Encoding/SubtitleOptions">client.encoding.<a href="./src/resources/encoding/encoding.ts">updateSubtitleOptions</a>({ ...params }) -> void</code>
+- <code title="post /Encoding/CodecParameters">client.encoding.<a href="./src/resources/encoding/encoding.ts">updateCodecParameters</a>(body, { ...params }) -> void</code>
+- <code title="post /Encoding/FfmpegOptions">client.encoding.<a href="./src/resources/encoding/encoding.ts">updateFfmpegOptions</a>(body) -> void</code>
+- <code title="post /Encoding/FullToneMapOptions">client.encoding.<a href="./src/resources/encoding/encoding.ts">updateFullToneMapOptions</a>(body) -> void</code>
+- <code title="post /Encoding/PublicToneMapOptions">client.encoding.<a href="./src/resources/encoding/encoding.ts">updatePublicToneMapOptions</a>(body) -> void</code>
+- <code title="post /Encoding/SubtitleOptions">client.encoding.<a href="./src/resources/encoding/encoding.ts">updateSubtitleOptions</a>(body) -> void</code>
 
 ## FullToneMapOptions
 
@@ -1200,8 +1200,8 @@ Methods:
 - <code title="get /System/Configuration">client.system.configuration.<a href="./src/resources/system/configuration.ts">retrieve</a>() -> ServerConfiguration</code>
 - <code title="post /System/Configuration">client.system.configuration.<a href="./src/resources/system/configuration.ts">update</a>({ ...params }) -> void</code>
 - <code title="get /System/Configuration/{Key}">client.system.configuration.<a href="./src/resources/system/configuration.ts">retrieveNamed</a>(key) -> void</code>
-- <code title="post /System/Configuration/{Key}">client.system.configuration.<a href="./src/resources/system/configuration.ts">updateNamed</a>(key, { ...params }) -> void</code>
-- <code title="post /System/Configuration/Partial">client.system.configuration.<a href="./src/resources/system/configuration.ts">updatePartial</a>({ ...params }) -> void</code>
+- <code title="post /System/Configuration/{Key}">client.system.configuration.<a href="./src/resources/system/configuration.ts">updateNamed</a>(key, body) -> void</code>
+- <code title="post /System/Configuration/Partial">client.system.configuration.<a href="./src/resources/system/configuration.ts">updatePartial</a>(body) -> void</code>
 
 ## ReleaseNotes
 
@@ -1318,7 +1318,7 @@ Types:
 Methods:
 
 - <code title="post /Users/{Id}/Configuration">client.users.configuration.<a href="./src/resources/users/configuration.ts">update</a>(id, { ...params }) -> void</code>
-- <code title="post /Users/{Id}/Configuration/Partial">client.users.configuration.<a href="./src/resources/users/configuration.ts">updatePartial</a>(id, { ...params }) -> void</code>
+- <code title="post /Users/{Id}/Configuration/Partial">client.users.configuration.<a href="./src/resources/users/configuration.ts">updatePartial</a>(id, body) -> void</code>
 
 ## Items
 
@@ -1360,7 +1360,7 @@ Methods:
 Methods:
 
 - <code title="get /Users/{UserId}/TypedSettings/{Key}">client.users.typedSettings.<a href="./src/resources/users/typed-settings.ts">retrieve</a>(key, { ...params }) -> void</code>
-- <code title="post /Users/{UserId}/TypedSettings/{Key}">client.users.typedSettings.<a href="./src/resources/users/typed-settings.ts">update</a>(key, { ...params }) -> void</code>
+- <code title="post /Users/{UserId}/TypedSettings/{Key}">client.users.typedSettings.<a href="./src/resources/users/typed-settings.ts">update</a>(key, body, { ...params }) -> void</code>
 
 ## FavoriteItems
 
@@ -1378,7 +1378,7 @@ Methods:
 Methods:
 
 - <code title="get /Users/{Id}/Images/{Type}/{Index}">client.users.images.<a href="./src/resources/users/images/images.ts">retrieve</a>(index, { ...params }) -> void</code>
-- <code title="post /Users/{Id}/Images/{Type}/{Index}">client.users.images.<a href="./src/resources/users/images/images.ts">update</a>(index, { ...params }) -> void</code>
+- <code title="post /Users/{Id}/Images/{Type}/{Index}">client.users.images.<a href="./src/resources/users/images/images.ts">update</a>(index, body, { ...params }) -> void</code>
 
 ### Delete
 

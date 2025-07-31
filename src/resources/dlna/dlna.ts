@@ -2,9 +2,9 @@
 
 import { APIResource } from '../../core/resource';
 import * as ConnectionmanagerAPI from './connectionmanager';
-import { Connectionmanager, ConnectionmanagerProcessControlParams } from './connectionmanager';
+import { Connectionmanager } from './connectionmanager';
 import * as ContentdirectoryAPI from './contentdirectory';
-import { Contentdirectory, ContentdirectoryProcessControlParams } from './contentdirectory';
+import { Contentdirectory } from './contentdirectory';
 import * as IconsAPI from './icons';
 import { IconRetrieveForServerParams, IconRetrieveParams, Icons } from './icons';
 import * as ProfilesAPI from './profiles';
@@ -96,13 +96,7 @@ export declare namespace Dlna {
     type IconRetrieveForServerParams as IconRetrieveForServerParams,
   };
 
-  export {
-    Contentdirectory as Contentdirectory,
-    type ContentdirectoryProcessControlParams as ContentdirectoryProcessControlParams,
-  };
+  export { Contentdirectory as Contentdirectory };
 
-  export {
-    Connectionmanager as Connectionmanager,
-    type ConnectionmanagerProcessControlParams as ConnectionmanagerProcessControlParams,
-  };
+  export { Connectionmanager as Connectionmanager };
 }

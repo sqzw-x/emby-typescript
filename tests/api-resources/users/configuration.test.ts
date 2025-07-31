@@ -21,10 +21,11 @@ describe('resource configuration', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('updatePartial: only required params', async () => {
-    const responsePromise = client.users.configuration.updatePartial('Id', {
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+  test.skip('updatePartial', async () => {
+    const responsePromise = client.users.configuration.updatePartial(
+      'Id',
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+    );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -32,12 +33,5 @@ describe('resource configuration', () => {
     const dataAndResponse = await responsePromise.withResponse();
     expect(dataAndResponse.data).toBe(response);
     expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // skipped: tests are disabled for the time being
-  test.skip('updatePartial: required and optional params', async () => {
-    const response = await client.users.configuration.updatePartial('Id', {
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
   });
 });
