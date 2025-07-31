@@ -21,10 +21,11 @@ describe('resource contentdirectory', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('processControl: only required params', async () => {
-    const responsePromise = client.dlna.contentdirectory.processControl('UuId', {
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+  test.skip('processControl', async () => {
+    const responsePromise = client.dlna.contentdirectory.processControl(
+      'UuId',
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+    );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -32,13 +33,6 @@ describe('resource contentdirectory', () => {
     const dataAndResponse = await responsePromise.withResponse();
     expect(dataAndResponse.data).toBe(response);
     expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // skipped: tests are disabled for the time being
-  test.skip('processControl: required and optional params', async () => {
-    const response = await client.dlna.contentdirectory.processControl('UuId', {
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
   });
 
   // skipped: tests are disabled for the time being

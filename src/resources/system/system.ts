@@ -4,13 +4,7 @@ import { APIResource } from '../../core/resource';
 import * as ActivityLogAPI from './activity-log';
 import { ActivityLog, ActivityLogListEntriesParams, ActivityLogListEntriesResponse } from './activity-log';
 import * as ConfigurationAPI from './configuration';
-import {
-  Configuration,
-  ConfigurationUpdateNamedParams,
-  ConfigurationUpdateParams,
-  ConfigurationUpdatePartialParams,
-  ServerConfiguration,
-} from './configuration';
+import { Configuration, ConfigurationUpdateParams, ServerConfiguration } from './configuration';
 import * as InfoAPI from './info';
 import { Info, InfoRetrievePublicResponse, InfoRetrieveResponse } from './info';
 import * as LogsAPI from './logs';
@@ -106,8 +100,6 @@ export declare namespace System {
     Configuration as Configuration,
     type ServerConfiguration as ServerConfiguration,
     type ConfigurationUpdateParams as ConfigurationUpdateParams,
-    type ConfigurationUpdateNamedParams as ConfigurationUpdateNamedParams,
-    type ConfigurationUpdatePartialParams as ConfigurationUpdatePartialParams,
   };
 
   export {

@@ -22,10 +22,9 @@ export class Contentdirectory extends APIResource {
    */
   processControl(
     uuID: string,
-    params: ContentdirectoryProcessControlParams,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { body } = params;
     return this._client.post(path`/Dlna/${uuID}/contentdirectory/control`, {
       body: body,
       ...options,
@@ -45,12 +44,4 @@ export class Contentdirectory extends APIResource {
       headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
     });
   }
-}
-
-export interface ContentdirectoryProcessControlParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
-export declare namespace Contentdirectory {
-  export { type ContentdirectoryProcessControlParams as ContentdirectoryProcessControlParams };
 }

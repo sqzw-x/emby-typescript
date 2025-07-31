@@ -86,12 +86,11 @@ export class Encoding extends APIResource {
    * Requires authentication as administrator
    */
   updateCodecParameters(
-    params: EncodingUpdateCodecParametersParams,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { CodecId, ParameterContext, body } = params;
+    const { CodecId, ParameterContext } = params;
     return this._client.post('/Encoding/CodecParameters', {
-      query: { CodecId, ParameterContext },
       body: body,
       ...options,
       headers: buildHeaders([
@@ -104,8 +103,10 @@ export class Encoding extends APIResource {
   /**
    * Requires authentication as administrator
    */
-  updateFfmpegOptions(params: EncodingUpdateFfmpegOptionsParams, options?: RequestOptions): APIPromise<void> {
-    const { body } = params;
+  updateFfmpegOptions(
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    options?: RequestOptions,
+  ): APIPromise<void> {
     return this._client.post('/Encoding/FfmpegOptions', {
       body: body,
       ...options,
@@ -120,10 +121,9 @@ export class Encoding extends APIResource {
    * Requires authentication as administrator
    */
   updateFullToneMapOptions(
-    params: EncodingUpdateFullToneMapOptionsParams,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { body } = params;
     return this._client.post('/Encoding/FullToneMapOptions', {
       body: body,
       ...options,
@@ -138,10 +138,9 @@ export class Encoding extends APIResource {
    * Requires authentication as administrator
    */
   updatePublicToneMapOptions(
-    params: EncodingUpdatePublicToneMapOptionsParams,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { body } = params;
     return this._client.post('/Encoding/PublicToneMapOptions', {
       body: body,
       ...options,
@@ -156,10 +155,9 @@ export class Encoding extends APIResource {
    * Requires authentication as administrator
    */
   updateSubtitleOptions(
-    params: EncodingUpdateSubtitleOptionsParams,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { body } = params;
     return this._client.post('/Encoding/SubtitleOptions', {
       body: body,
       ...options,
@@ -749,39 +747,6 @@ export interface EncodingGetCodecParametersParams {
   ParameterContext: CodecParametersAPI.CodecParameterContext;
 }
 
-export interface EncodingUpdateCodecParametersParams {
-  /**
-   * Query param: Codec Id
-   */
-  CodecId: string;
-
-  /**
-   * Query param: Parameter Context
-   */
-  ParameterContext: CodecParametersAPI.CodecParameterContext;
-
-  /**
-   * Body param:
-   */
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
-export interface EncodingUpdateFfmpegOptionsParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
-export interface EncodingUpdateFullToneMapOptionsParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
-export interface EncodingUpdatePublicToneMapOptionsParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
-export interface EncodingUpdateSubtitleOptionsParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
 Encoding.FullToneMapOptions = FullToneMapOptions;
 Encoding.CodecParameters = CodecParameters;
 Encoding.CodecInformation = CodecInformation;
@@ -792,11 +757,6 @@ export declare namespace Encoding {
     type EncodingGetCodecInformationVideoResponse as EncodingGetCodecInformationVideoResponse,
     type EncodingGetToneMapOptionsResponse as EncodingGetToneMapOptionsResponse,
     type EncodingGetCodecParametersParams as EncodingGetCodecParametersParams,
-    type EncodingUpdateCodecParametersParams as EncodingUpdateCodecParametersParams,
-    type EncodingUpdateFfmpegOptionsParams as EncodingUpdateFfmpegOptionsParams,
-    type EncodingUpdateFullToneMapOptionsParams as EncodingUpdateFullToneMapOptionsParams,
-    type EncodingUpdatePublicToneMapOptionsParams as EncodingUpdatePublicToneMapOptionsParams,
-    type EncodingUpdateSubtitleOptionsParams as EncodingUpdateSubtitleOptionsParams,
   };
 
   export {

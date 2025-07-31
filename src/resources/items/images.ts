@@ -128,10 +128,13 @@ export class Images extends APIResource {
   /**
    * Requires authentication as administrator
    */
-  upload(type: ImageType, params: ImageUploadParams, options?: RequestOptions): APIPromise<void> {
-    const { Id, body, Index } = params;
+  upload(
+    type: ImageType,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    options?: RequestOptions,
+  ): APIPromise<void> {
+    const { Id, Index } = params;
     return this._client.post(path`/Items/${Id}/Images/${type}`, {
-      query: { Index },
       body: body,
       ...options,
       headers: buildHeaders([
@@ -146,10 +149,10 @@ export class Images extends APIResource {
    */
   uploadByTypeAndIndex(
     index: number,
-    params: ImageUploadByTypeAndIndexParams,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { Id, Type, body } = params;
+    const { Id, Type } = params;
     return this._client.post(path`/Items/${Id}/Images/${Type}/${index}`, {
       body: body,
       ...options,
@@ -521,40 +524,6 @@ export interface ImageUpdateURLParams {
   Url: string;
 }
 
-export interface ImageUploadParams {
-  /**
-   * Path param: Item Id
-   */
-  Id: string;
-
-  /**
-   * Body param:
-   */
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-
-  /**
-   * Query param: Image Index
-   */
-  Index?: number;
-}
-
-export interface ImageUploadByTypeAndIndexParams {
-  /**
-   * Path param: Item Id
-   */
-  Id: string;
-
-  /**
-   * Path param: Image Type
-   */
-  Type: ImageType;
-
-  /**
-   * Body param:
-   */
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
 export declare namespace Images {
   export {
     type ImageType as ImageType,
@@ -567,7 +536,5 @@ export declare namespace Images {
     type ImageRetrieveDetailedParams as ImageRetrieveDetailedParams,
     type ImageUpdateIndexParams as ImageUpdateIndexParams,
     type ImageUpdateURLParams as ImageUpdateURLParams,
-    type ImageUploadParams as ImageUploadParams,
-    type ImageUploadByTypeAndIndexParams as ImageUploadByTypeAndIndexParams,
   };
 }

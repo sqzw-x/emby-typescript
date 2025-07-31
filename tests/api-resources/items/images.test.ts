@@ -217,10 +217,10 @@ describe('resource images', () => {
 
   // skipped: tests are disabled for the time being
   test.skip('upload: only required params', async () => {
-    const responsePromise = client.items.images.upload('Primary', {
-      Id: 'Id',
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+    const responsePromise = client.items.images.upload(
+      'Primary',
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+    );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -232,20 +232,19 @@ describe('resource images', () => {
 
   // skipped: tests are disabled for the time being
   test.skip('upload: required and optional params', async () => {
-    const response = await client.items.images.upload('Primary', {
-      Id: 'Id',
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-      Index: 0,
-    });
+    const response = await client.items.images.upload(
+      'Primary',
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+      { Id: 'Id', Index: 0 },
+    );
   });
 
   // skipped: tests are disabled for the time being
   test.skip('uploadByTypeAndIndex: only required params', async () => {
-    const responsePromise = client.items.images.uploadByTypeAndIndex(0, {
-      Id: 'Id',
-      Type: 'Primary',
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+    const responsePromise = client.items.images.uploadByTypeAndIndex(
+      0,
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+    );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -257,10 +256,10 @@ describe('resource images', () => {
 
   // skipped: tests are disabled for the time being
   test.skip('uploadByTypeAndIndex: required and optional params', async () => {
-    const response = await client.items.images.uploadByTypeAndIndex(0, {
-      Id: 'Id',
-      Type: 'Primary',
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+    const response = await client.items.images.uploadByTypeAndIndex(
+      0,
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+      { Id: 'Id', Type: 'Primary' },
+    );
   });
 });

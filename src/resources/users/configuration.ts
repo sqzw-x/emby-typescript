@@ -23,10 +23,9 @@ export class Configuration extends APIResource {
    */
   updatePartial(
     id: string,
-    params: ConfigurationUpdatePartialParams,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { body } = params;
     return this._client.post(path`/Users/${id}/Configuration/Partial`, {
       body: body,
       ...options,
@@ -120,14 +119,9 @@ export interface ConfigurationUpdateParams {
   SubtitleMode?: 'Default' | 'Always' | 'OnlyForced' | 'None' | 'Smart' | 'HearingImpaired';
 }
 
-export interface ConfigurationUpdatePartialParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
 export declare namespace Configuration {
   export {
     type UserConfiguration as UserConfiguration,
     type ConfigurationUpdateParams as ConfigurationUpdateParams,
-    type ConfigurationUpdatePartialParams as ConfigurationUpdatePartialParams,
   };
 }

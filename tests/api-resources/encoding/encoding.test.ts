@@ -117,11 +117,9 @@ describe('resource encoding', () => {
 
   // skipped: tests are disabled for the time being
   test.skip('updateCodecParameters: only required params', async () => {
-    const responsePromise = client.encoding.updateCodecParameters({
-      CodecId: 'CodecId',
-      ParameterContext: 'Playback',
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+    const responsePromise = client.encoding.updateCodecParameters(
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+    );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -133,18 +131,17 @@ describe('resource encoding', () => {
 
   // skipped: tests are disabled for the time being
   test.skip('updateCodecParameters: required and optional params', async () => {
-    const response = await client.encoding.updateCodecParameters({
-      CodecId: 'CodecId',
-      ParameterContext: 'Playback',
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+    const response = await client.encoding.updateCodecParameters(
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+      { CodecId: 'CodecId', ParameterContext: 'Playback' },
+    );
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('updateFfmpegOptions: only required params', async () => {
-    const responsePromise = client.encoding.updateFfmpegOptions({
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+  test.skip('updateFfmpegOptions', async () => {
+    const responsePromise = client.encoding.updateFfmpegOptions(
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+    );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -155,17 +152,10 @@ describe('resource encoding', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('updateFfmpegOptions: required and optional params', async () => {
-    const response = await client.encoding.updateFfmpegOptions({
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
-  });
-
-  // skipped: tests are disabled for the time being
-  test.skip('updateFullToneMapOptions: only required params', async () => {
-    const responsePromise = client.encoding.updateFullToneMapOptions({
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+  test.skip('updateFullToneMapOptions', async () => {
+    const responsePromise = client.encoding.updateFullToneMapOptions(
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+    );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -176,17 +166,10 @@ describe('resource encoding', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('updateFullToneMapOptions: required and optional params', async () => {
-    const response = await client.encoding.updateFullToneMapOptions({
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
-  });
-
-  // skipped: tests are disabled for the time being
-  test.skip('updatePublicToneMapOptions: only required params', async () => {
-    const responsePromise = client.encoding.updatePublicToneMapOptions({
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+  test.skip('updatePublicToneMapOptions', async () => {
+    const responsePromise = client.encoding.updatePublicToneMapOptions(
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+    );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -197,17 +180,10 @@ describe('resource encoding', () => {
   });
 
   // skipped: tests are disabled for the time being
-  test.skip('updatePublicToneMapOptions: required and optional params', async () => {
-    const response = await client.encoding.updatePublicToneMapOptions({
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
-  });
-
-  // skipped: tests are disabled for the time being
-  test.skip('updateSubtitleOptions: only required params', async () => {
-    const responsePromise = client.encoding.updateSubtitleOptions({
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+  test.skip('updateSubtitleOptions', async () => {
+    const responsePromise = client.encoding.updateSubtitleOptions(
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+    );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -215,12 +191,5 @@ describe('resource encoding', () => {
     const dataAndResponse = await responsePromise.withResponse();
     expect(dataAndResponse.data).toBe(response);
     expect(dataAndResponse.response).toBe(rawResponse);
-  });
-
-  // skipped: tests are disabled for the time being
-  test.skip('updateSubtitleOptions: required and optional params', async () => {
-    const response = await client.encoding.updateSubtitleOptions({
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
   });
 });

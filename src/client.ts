@@ -147,11 +147,6 @@ import {
   EncodingGetCodecInformationVideoResponse,
   EncodingGetCodecParametersParams,
   EncodingGetToneMapOptionsResponse,
-  EncodingUpdateCodecParametersParams,
-  EncodingUpdateFfmpegOptionsParams,
-  EncodingUpdateFullToneMapOptionsParams,
-  EncodingUpdatePublicToneMapOptionsParams,
-  EncodingUpdateSubtitleOptionsParams,
 } from './resources/encoding/encoding';
 import {
   Environment,
@@ -1365,11 +1360,6 @@ export declare namespace Emby {
     type EncodingGetCodecInformationVideoResponse as EncodingGetCodecInformationVideoResponse,
     type EncodingGetToneMapOptionsResponse as EncodingGetToneMapOptionsResponse,
     type EncodingGetCodecParametersParams as EncodingGetCodecParametersParams,
-    type EncodingUpdateCodecParametersParams as EncodingUpdateCodecParametersParams,
-    type EncodingUpdateFfmpegOptionsParams as EncodingUpdateFfmpegOptionsParams,
-    type EncodingUpdateFullToneMapOptionsParams as EncodingUpdateFullToneMapOptionsParams,
-    type EncodingUpdatePublicToneMapOptionsParams as EncodingUpdatePublicToneMapOptionsParams,
-    type EncodingUpdateSubtitleOptionsParams as EncodingUpdateSubtitleOptionsParams,
   };
 
   export {

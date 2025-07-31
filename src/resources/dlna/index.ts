@@ -1,7 +1,7 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-export { Connectionmanager, type ConnectionmanagerProcessControlParams } from './connectionmanager';
-export { Contentdirectory, type ContentdirectoryProcessControlParams } from './contentdirectory';
+export { Connectionmanager } from './connectionmanager';
+export { Contentdirectory } from './contentdirectory';
 export { Dlna, type DlnaListProfilesResponse } from './dlna';
 export { Icons, type IconRetrieveParams, type IconRetrieveForServerParams } from './icons';
 export {
