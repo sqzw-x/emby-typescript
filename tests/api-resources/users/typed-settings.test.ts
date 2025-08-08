@@ -30,6 +30,7 @@ describe('resource typedSettings', () => {
     const responsePromise = client.users.typedSettings.update(
       'Key',
       await toFile(Buffer.from('# my file contents'), 'README.md'),
+      { UserId: 'UserId' },
     );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);

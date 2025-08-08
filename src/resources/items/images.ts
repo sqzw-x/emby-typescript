@@ -131,11 +131,13 @@ export class Images extends APIResource {
   upload(
     type: ImageType,
     body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    params: ImageUploadParams,
     options?: RequestOptions,
   ): APIPromise<void> {
     const { Id, Index } = params;
     return this._client.post(path`/Items/${Id}/Images/${type}`, {
       body: body,
+      query: { Index },
       ...options,
       headers: buildHeaders([
         { 'Content-Type': 'application/octet-stream', Accept: '*/*' },
@@ -150,6 +152,7 @@ export class Images extends APIResource {
   uploadByTypeAndIndex(
     index: number,
     body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    params: ImageUploadByTypeAndIndexParams,
     options?: RequestOptions,
   ): APIPromise<void> {
     const { Id, Type } = params;
@@ -524,6 +527,30 @@ export interface ImageUpdateURLParams {
   Url: string;
 }
 
+export interface ImageUploadParams {
+  /**
+   * Path param: Item Id
+   */
+  Id: string;
+
+  /**
+   * Query param: Image Index
+   */
+  Index?: number;
+}
+
+export interface ImageUploadByTypeAndIndexParams {
+  /**
+   * Path param: Item Id
+   */
+  Id: string;
+
+  /**
+   * Path param: Image Type
+   */
+  Type: ImageType;
+}
+
 export declare namespace Images {
   export {
     type ImageType as ImageType,
@@ -536,5 +563,7 @@ export declare namespace Images {
     type ImageRetrieveDetailedParams as ImageRetrieveDetailedParams,
     type ImageUpdateIndexParams as ImageUpdateIndexParams,
     type ImageUpdateURLParams as ImageUpdateURLParams,
+    type ImageUploadParams as ImageUploadParams,
+    type ImageUploadByTypeAndIndexParams as ImageUploadByTypeAndIndexParams,
   };
 }

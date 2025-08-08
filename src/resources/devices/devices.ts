@@ -2,7 +2,7 @@
 
 import { APIResource } from '../../core/resource';
 import * as CameraUploadsAPI from './camera-uploads';
-import { CameraUploadListResponse, CameraUploads } from './camera-uploads';
+import { CameraUploadListResponse, CameraUploadUploadParams, CameraUploads } from './camera-uploads';
 import * as OptionsAPI from './options';
 import { DeviceOptions, OptionRetrieveParams, OptionUpdateParams, Options } from './options';
 import { APIPromise } from '../../core/api-promise';
@@ -133,5 +133,9 @@ export declare namespace Devices {
     type OptionUpdateParams as OptionUpdateParams,
   };
 
-  export { CameraUploads as CameraUploads, type CameraUploadListResponse as CameraUploadListResponse };
+  export {
+    CameraUploads as CameraUploads,
+    type CameraUploadListResponse as CameraUploadListResponse,
+    type CameraUploadUploadParams as CameraUploadUploadParams,
+  };
 }

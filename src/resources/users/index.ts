@@ -15,7 +15,7 @@ export {
   type ForgotPasswordInitiateParams,
   type ForgotPasswordRedeemPinParams,
 } from './forgot-password';
-export { Images, type ImageRetrieveParams } from './images/index';
+export { Images, type ImageRetrieveParams, type ImageUpdateParams } from './images/index';
 export {
   Items,
   type ItemRetrieveLatestResponse,
@@ -41,7 +41,11 @@ export {
   type PlayingItemProgressParams,
 } from './playing-items';
 export { TrackSelections, type TrackSelectionDeleteParams } from './track-selections';
-export { TypedSettings, type TypedSettingRetrieveParams } from './typed-settings';
+export {
+  TypedSettings,
+  type TypedSettingRetrieveParams,
+  type TypedSettingUpdateParams,
+} from './typed-settings';
 export {
   Users,
   type AuthenticationResult,

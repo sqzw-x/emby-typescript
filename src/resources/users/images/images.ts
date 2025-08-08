@@ -30,6 +30,7 @@ export class Images extends APIResource {
   update(
     index: number,
     body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    params: ImageUpdateParams,
     options?: RequestOptions,
   ): APIPromise<void> {
     const { Id, Type } = params;
@@ -125,10 +126,22 @@ export interface ImageRetrieveParams {
   Width?: number;
 }
 
+export interface ImageUpdateParams {
+  /**
+   * Path param: User Id
+   */
+  Id: string;
+
+  /**
+   * Path param: Image Type
+   */
+  Type: ImagesAPI.ImageType;
+}
+
 Images.Delete = Delete;
 
 export declare namespace Images {
-  export { type ImageRetrieveParams as ImageRetrieveParams };
+  export { type ImageRetrieveParams as ImageRetrieveParams, type ImageUpdateParams as ImageUpdateParams };
 
   export { Delete as Delete, type DeleteDeleteParams as DeleteDeleteParams };
 }

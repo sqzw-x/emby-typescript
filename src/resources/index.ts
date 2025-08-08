@@ -67,6 +67,7 @@ export {
   type EncodingGetCodecInformationVideoResponse,
   type EncodingGetToneMapOptionsResponse,
   type EncodingGetCodecParametersParams,
+  type EncodingUpdateCodecParametersParams,
 } from './encoding/encoding';
 export {
   Environment,

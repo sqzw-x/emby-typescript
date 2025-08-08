@@ -24,6 +24,7 @@ describe('resource cameraUploads', () => {
   test.skip('upload: only required params', async () => {
     const responsePromise = client.devices.cameraUploads.upload(
       await toFile(Buffer.from('# my file contents'), 'README.md'),
+      { Album: 'Album', Id: 'Id', Name: 'Name' },
     );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);

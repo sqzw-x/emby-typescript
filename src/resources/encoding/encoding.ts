@@ -87,11 +87,13 @@ export class Encoding extends APIResource {
    */
   updateCodecParameters(
     body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    params: EncodingUpdateCodecParametersParams,
     options?: RequestOptions,
   ): APIPromise<void> {
     const { CodecId, ParameterContext } = params;
     return this._client.post('/Encoding/CodecParameters', {
       body: body,
+      query: { CodecId, ParameterContext },
       ...options,
       headers: buildHeaders([
         { 'Content-Type': 'application/octet-stream', Accept: '*/*' },
@@ -747,6 +749,18 @@ export interface EncodingGetCodecParametersParams {
   ParameterContext: CodecParametersAPI.CodecParameterContext;
 }
 
+export interface EncodingUpdateCodecParametersParams {
+  /**
+   * Query param: Codec Id
+   */
+  CodecId: string;
+
+  /**
+   * Query param: Parameter Context
+   */
+  ParameterContext: CodecParametersAPI.CodecParameterContext;
+}
+
 Encoding.FullToneMapOptions = FullToneMapOptions;
 Encoding.CodecParameters = CodecParameters;
 Encoding.CodecInformation = CodecInformation;
@@ -757,6 +771,7 @@ export declare namespace Encoding {
     type EncodingGetCodecInformationVideoResponse as EncodingGetCodecInformationVideoResponse,
     type EncodingGetToneMapOptionsResponse as EncodingGetToneMapOptionsResponse,
     type EncodingGetCodecParametersParams as EncodingGetCodecParametersParams,
+    type EncodingUpdateCodecParametersParams as EncodingUpdateCodecParametersParams,
   };
 
   export {
