@@ -147,6 +147,7 @@ import {
   EncodingGetCodecInformationVideoResponse,
   EncodingGetCodecParametersParams,
   EncodingGetToneMapOptionsResponse,
+  EncodingUpdateCodecParametersParams,
 } from './resources/encoding/encoding';
 import {
   Environment,
@@ -1360,6 +1361,7 @@ export declare namespace Emby {
     type EncodingGetCodecInformationVideoResponse as EncodingGetCodecInformationVideoResponse,
     type EncodingGetToneMapOptionsResponse as EncodingGetToneMapOptionsResponse,
     type EncodingGetCodecParametersParams as EncodingGetCodecParametersParams,
+    type EncodingUpdateCodecParametersParams as EncodingUpdateCodecParametersParams,
   };
 
   export {

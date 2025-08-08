@@ -24,6 +24,7 @@ export class TypedSettings extends APIResource {
   update(
     key: string,
     body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    params: TypedSettingUpdateParams,
     options?: RequestOptions,
   ): APIPromise<void> {
     const { UserId } = params;
@@ -42,6 +43,16 @@ export interface TypedSettingRetrieveParams {
   UserId: string;
 }
 
+export interface TypedSettingUpdateParams {
+  /**
+   * Path param:
+   */
+  UserId: string;
+}
+
 export declare namespace TypedSettings {
-  export { type TypedSettingRetrieveParams as TypedSettingRetrieveParams };
+  export {
+    type TypedSettingRetrieveParams as TypedSettingRetrieveParams,
+    type TypedSettingUpdateParams as TypedSettingUpdateParams,
+  };
 }

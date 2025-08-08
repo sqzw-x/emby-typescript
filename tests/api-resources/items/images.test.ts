@@ -220,6 +220,7 @@ describe('resource images', () => {
     const responsePromise = client.items.images.upload(
       'Primary',
       await toFile(Buffer.from('# my file contents'), 'README.md'),
+      { Id: 'Id' },
     );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -244,6 +245,7 @@ describe('resource images', () => {
     const responsePromise = client.items.images.uploadByTypeAndIndex(
       0,
       await toFile(Buffer.from('# my file contents'), 'README.md'),
+      { Id: 'Id', Type: 'Primary' },
     );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);

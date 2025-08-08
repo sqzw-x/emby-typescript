@@ -119,6 +119,7 @@ describe('resource encoding', () => {
   test.skip('updateCodecParameters: only required params', async () => {
     const responsePromise = client.encoding.updateCodecParameters(
       await toFile(Buffer.from('# my file contents'), 'README.md'),
+      { CodecId: 'CodecId', ParameterContext: 'Playback' },
     );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);

@@ -12,6 +12,8 @@ export {
   type ImageRetrieveDetailedParams,
   type ImageUpdateIndexParams,
   type ImageUpdateURLParams,
+  type ImageUploadParams,
+  type ImageUploadByTypeAndIndexParams,
 } from './images';
 export {
   Items,
