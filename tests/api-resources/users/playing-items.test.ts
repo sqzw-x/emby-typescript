@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource playingItems', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.users.playingItems.update('Id', {
       UserId: 'UserId',
@@ -23,7 +23,7 @@ describe('resource playingItems', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.users.playingItems.update('Id', {
       UserId: 'UserId',
@@ -37,7 +37,7 @@ describe('resource playingItems', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.users.playingItems.delete('Id', {
       UserId: 'UserId',
@@ -53,7 +53,7 @@ describe('resource playingItems', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.users.playingItems.delete('Id', {
       UserId: 'UserId',
@@ -65,7 +65,7 @@ describe('resource playingItems', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('progress: only required params', async () => {
     const responsePromise = client.users.playingItems.progress('Id', {
       UserId: 'UserId',
@@ -80,7 +80,7 @@ describe('resource playingItems', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('progress: required and optional params', async () => {
     const response = await client.users.playingItems.progress('Id', {
       UserId: 'UserId',

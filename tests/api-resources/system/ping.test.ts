@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource ping', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('check', async () => {
     const responsePromise = client.system.ping.check();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource ping', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('send', async () => {
     const responsePromise = client.system.ping.send();
     const rawResponse = await responsePromise.asResponse();

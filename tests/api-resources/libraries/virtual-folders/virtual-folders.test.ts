@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource virtualFolders', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.libraries.virtualFolders.create({});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource virtualFolders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.libraries.virtualFolders.delete();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource virtualFolders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteFolder', async () => {
     const responsePromise = client.libraries.virtualFolders.deleteFolder({});
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource virtualFolders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveQuery', async () => {
     const responsePromise = client.libraries.virtualFolders.retrieveQuery();
     const rawResponse = await responsePromise.asResponse();
@@ -56,7 +56,7 @@ describe('resource virtualFolders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveQuery: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -67,7 +67,7 @@ describe('resource virtualFolders', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('setLibraryOptions', async () => {
     const responsePromise = client.libraries.virtualFolders.setLibraryOptions({});
     const rawResponse = await responsePromise.asResponse();
@@ -79,7 +79,7 @@ describe('resource virtualFolders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('setName', async () => {
     const responsePromise = client.libraries.virtualFolders.setName({});
     const rawResponse = await responsePromise.asResponse();

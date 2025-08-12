@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource system', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('restart', async () => {
     const responsePromise = client.system.restart();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource system', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveEndpointInfo', async () => {
     const responsePromise = client.system.retrieveEndpointInfo();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource system', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveWakeOnLanInfo', async () => {
     const responsePromise = client.system.retrieveWakeOnLanInfo();
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource system', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('shutdown', async () => {
     const responsePromise = client.system.shutdown();
     const rawResponse = await responsePromise.asResponse();

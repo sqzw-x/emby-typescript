@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource liveStreamFiles', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.liveTv.liveStreamFiles.retrieve('Container', { Id: 'Id' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource liveStreamFiles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.liveTv.liveStreamFiles.retrieve('Container', { Id: 'Id' });
   });

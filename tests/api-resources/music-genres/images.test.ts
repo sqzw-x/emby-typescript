@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource images', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveByType: only required params', async () => {
     const responsePromise = client.musicGenres.images.retrieveByType('Primary', { Name: 'Name' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource images', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveByType: required and optional params', async () => {
     const response = await client.musicGenres.images.retrieveByType('Primary', {
       Name: 'Name',
@@ -41,7 +41,7 @@ describe('resource images', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveByTypeAndIndex: only required params', async () => {
     const responsePromise = client.musicGenres.images.retrieveByTypeAndIndex(0, {
       Name: 'Name',
@@ -56,7 +56,7 @@ describe('resource images', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveByTypeAndIndex: required and optional params', async () => {
     const response = await client.musicGenres.images.retrieveByTypeAndIndex(0, {
       Name: 'Name',

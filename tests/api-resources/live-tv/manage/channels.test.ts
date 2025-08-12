@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource channels', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.liveTv.manage.channels.list();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource channels', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -31,7 +31,7 @@ describe('resource channels', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('setDisabled', async () => {
     const responsePromise = client.liveTv.manage.channels.setDisabled('Id', {});
     const rawResponse = await responsePromise.asResponse();
@@ -43,7 +43,7 @@ describe('resource channels', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('setSortIndex', async () => {
     const responsePromise = client.liveTv.manage.channels.setSortIndex('Id', {});
     const rawResponse = await responsePromise.asResponse();

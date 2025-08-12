@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource images', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveRemote: only required params', async () => {
     const responsePromise = client.images.retrieveRemote({ ImageUrl: 'ImageUrl' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource images', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveRemote: required and optional params', async () => {
     const response = await client.images.retrieveRemote({ ImageUrl: 'ImageUrl' });
   });

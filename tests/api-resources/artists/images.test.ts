@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource images', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listByType: only required params', async () => {
     const responsePromise = client.artists.images.listByType('Primary', { Name: 'Name' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource images', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listByType: required and optional params', async () => {
     const response = await client.artists.images.listByType('Primary', {
       Name: 'Name',
@@ -41,7 +41,7 @@ describe('resource images', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveByIndex: only required params', async () => {
     const responsePromise = client.artists.images.retrieveByIndex(0, { Name: 'Name', Type: 'Primary' });
     const rawResponse = await responsePromise.asResponse();
@@ -53,7 +53,7 @@ describe('resource images', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveByIndex: required and optional params', async () => {
     const response = await client.artists.images.retrieveByIndex(0, {
       Name: 'Name',

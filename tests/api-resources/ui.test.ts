@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource ui', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('executeCommand', async () => {
     const responsePromise = client.ui.executeCommand({});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource ui', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveView: only required params', async () => {
     const responsePromise = client.ui.retrieveView({ ClientLocale: 'ClientLocale', PageId: 'PageId' });
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource ui', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveView: required and optional params', async () => {
     const response = await client.ui.retrieveView({ ClientLocale: 'ClientLocale', PageId: 'PageId' });
   });

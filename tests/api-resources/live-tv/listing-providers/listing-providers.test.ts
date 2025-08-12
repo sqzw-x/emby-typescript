@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource listingProviders', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.liveTv.listingProviders.create({});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource listingProviders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.liveTv.listingProviders.list({ ChannelId: 'ChannelId' });
     const rawResponse = await responsePromise.asResponse();
@@ -32,12 +32,12 @@ describe('resource listingProviders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.liveTv.listingProviders.list({ ChannelId: 'ChannelId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.liveTv.listingProviders.delete();
     const rawResponse = await responsePromise.asResponse();
@@ -49,7 +49,7 @@ describe('resource listingProviders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -57,7 +57,7 @@ describe('resource listingProviders', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteProvider', async () => {
     const responsePromise = client.liveTv.listingProviders.deleteProvider();
     const rawResponse = await responsePromise.asResponse();
@@ -69,7 +69,7 @@ describe('resource listingProviders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteProvider: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -77,7 +77,7 @@ describe('resource listingProviders', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listAvailable', async () => {
     const responsePromise = client.liveTv.listingProviders.listAvailable();
     const rawResponse = await responsePromise.asResponse();
@@ -89,7 +89,7 @@ describe('resource listingProviders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listLineups', async () => {
     const responsePromise = client.liveTv.listingProviders.listLineups();
     const rawResponse = await responsePromise.asResponse();
@@ -101,7 +101,7 @@ describe('resource listingProviders', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listLineups: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -112,7 +112,7 @@ describe('resource listingProviders', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveDefault', async () => {
     const responsePromise = client.liveTv.listingProviders.retrieveDefault();
     const rawResponse = await responsePromise.asResponse();

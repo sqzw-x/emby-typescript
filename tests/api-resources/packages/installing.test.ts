@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource installing', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('cancel', async () => {
     const responsePromise = client.packages.installing.cancel('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource installing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('cancelInstallation', async () => {
     const responsePromise = client.packages.installing.cancelInstallation('Id');
     const rawResponse = await responsePromise.asResponse();

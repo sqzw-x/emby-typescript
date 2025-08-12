@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource configuration', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.system.configuration.retrieve();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource configuration', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.system.configuration.update({});
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource configuration', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveNamed', async () => {
     const responsePromise = client.system.configuration.retrieveNamed('Key');
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource configuration', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateNamed', async () => {
     const responsePromise = client.system.configuration.updateNamed(
       'Key',
@@ -59,7 +59,7 @@ describe('resource configuration', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updatePartial', async () => {
     const responsePromise = client.system.configuration.updatePartial(
       await toFile(Buffer.from('# my file contents'), 'README.md'),

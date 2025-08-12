@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource liveStreams', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('close: only required params', async () => {
     const responsePromise = client.liveStreams.close({ LiveStreamId: 'LiveStreamId' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource liveStreams', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('close: required and optional params', async () => {
     const response = await client.liveStreams.close({ LiveStreamId: 'LiveStreamId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getMediaInfo: only required params', async () => {
     const responsePromise = client.liveStreams.getMediaInfo({ LiveStreamId: 'LiveStreamId' });
     const rawResponse = await responsePromise.asResponse();
@@ -37,12 +37,12 @@ describe('resource liveStreams', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getMediaInfo: required and optional params', async () => {
     const response = await client.liveStreams.getMediaInfo({ LiveStreamId: 'LiveStreamId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('open', async () => {
     const responsePromise = client.liveStreams.open({});
     const rawResponse = await responsePromise.asResponse();

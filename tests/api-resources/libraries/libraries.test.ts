@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource libraries', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listAvailableOptions', async () => {
     const responsePromise = client.libraries.listAvailableOptions();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource libraries', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listMediaFolders', async () => {
     const responsePromise = client.libraries.listMediaFolders();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource libraries', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listMediaFolders: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -40,7 +40,7 @@ describe('resource libraries', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listPhysicalPaths', async () => {
     const responsePromise = client.libraries.listPhysicalPaths();
     const rawResponse = await responsePromise.asResponse();
@@ -52,7 +52,7 @@ describe('resource libraries', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listSelectableMediaFolders', async () => {
     const responsePromise = client.libraries.listSelectableMediaFolders();
     const rawResponse = await responsePromise.asResponse();
@@ -64,7 +64,7 @@ describe('resource libraries', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('startLibraryScan', async () => {
     const responsePromise = client.libraries.startLibraryScan();
     const rawResponse = await responsePromise.asResponse();

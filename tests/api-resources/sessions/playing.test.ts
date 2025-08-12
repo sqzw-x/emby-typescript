@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource playing', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('issuePlaystateCommand: only required params', async () => {
     const responsePromise = client.sessions.playing.issuePlaystateCommand('Stop', { Id: 'Id' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource playing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('issuePlaystateCommand: required and optional params', async () => {
     const response = await client.sessions.playing.issuePlaystateCommand('Stop', {
       Id: 'Id',
@@ -30,7 +30,7 @@ describe('resource playing', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('ping', async () => {
     const responsePromise = client.sessions.playing.ping();
     const rawResponse = await responsePromise.asResponse();
@@ -42,7 +42,7 @@ describe('resource playing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('ping: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -50,7 +50,7 @@ describe('resource playing', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('playItem: only required params', async () => {
     const responsePromise = client.sessions.playing.playItem('Id', { ItemIds: [0], PlayCommand: 'PlayNow' });
     const rawResponse = await responsePromise.asResponse();
@@ -62,7 +62,7 @@ describe('resource playing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('playItem: required and optional params', async () => {
     const response = await client.sessions.playing.playItem('Id', {
       ItemIds: [0],
@@ -76,7 +76,7 @@ describe('resource playing', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('reportProgress', async () => {
     const responsePromise = client.sessions.playing.reportProgress({});
     const rawResponse = await responsePromise.asResponse();
@@ -88,7 +88,7 @@ describe('resource playing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('reportStarted', async () => {
     const responsePromise = client.sessions.playing.reportStarted({});
     const rawResponse = await responsePromise.asResponse();
@@ -100,7 +100,7 @@ describe('resource playing', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('reportStopped', async () => {
     const responsePromise = client.sessions.playing.reportStopped({});
     const rawResponse = await responsePromise.asResponse();

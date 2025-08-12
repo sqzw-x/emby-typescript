@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource subtitles', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.items.subtitles.delete(0, { Id: 'Id', MediaSourceId: 'MediaSourceId' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource subtitles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.items.subtitles.delete(0, { Id: 'Id', MediaSourceId: 'MediaSourceId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteExternal: only required params', async () => {
     const responsePromise = client.items.subtitles.deleteExternal(0, {
       Id: 'Id',
@@ -40,7 +40,7 @@ describe('resource subtitles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteExternal: required and optional params', async () => {
     const response = await client.items.subtitles.deleteExternal(0, {
       Id: 'Id',
@@ -48,7 +48,7 @@ describe('resource subtitles', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('stream: only required params', async () => {
     const responsePromise = client.items.subtitles.stream('Format', {
       Id: 'Id',
@@ -64,7 +64,7 @@ describe('resource subtitles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('stream: required and optional params', async () => {
     const response = await client.items.subtitles.stream('Format', {
       Id: 'Id',
@@ -76,7 +76,7 @@ describe('resource subtitles', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('streamWithPosition: only required params', async () => {
     const responsePromise = client.items.subtitles.streamWithPosition('Format', {
       Id: 'Id',
@@ -93,7 +93,7 @@ describe('resource subtitles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('streamWithPosition: required and optional params', async () => {
     const response = await client.items.subtitles.streamWithPosition('Format', {
       Id: 'Id',

@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource logs', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.system.logs.retrieve('Name');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource logs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -28,7 +28,7 @@ describe('resource logs', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listAvailable', async () => {
     const responsePromise = client.system.logs.listAvailable();
     const rawResponse = await responsePromise.asResponse();
@@ -40,7 +40,7 @@ describe('resource logs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listAvailable: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -48,7 +48,7 @@ describe('resource logs', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveLines', async () => {
     const responsePromise = client.system.logs.retrieveLines('Name');
     const rawResponse = await responsePromise.asResponse();

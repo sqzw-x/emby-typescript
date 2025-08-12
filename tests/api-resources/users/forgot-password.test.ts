@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource forgotPassword', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('initiate', async () => {
     const responsePromise = client.users.forgotPassword.initiate({});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource forgotPassword', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('redeemPin', async () => {
     const responsePromise = client.users.forgotPassword.redeemPin({});
     const rawResponse = await responsePromise.asResponse();

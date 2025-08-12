@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource albums', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createInstantMix', async () => {
     const responsePromise = client.albums.createInstantMix('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource albums', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createInstantMix: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -41,7 +41,7 @@ describe('resource albums', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listSimilar', async () => {
     const responsePromise = client.albums.listSimilar('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -53,7 +53,7 @@ describe('resource albums', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listSimilar: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource command', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('issueCommand', async () => {
     const responsePromise = client.sessions.command.issueCommand('Id', {});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource command', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('issueSpecificCommand: only required params', async () => {
     const responsePromise = client.sessions.command.issueSpecificCommand('Command', { Id: 'Id' });
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource command', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('issueSpecificCommand: required and optional params', async () => {
     const response = await client.sessions.command.issueSpecificCommand('Command', { Id: 'Id' });
   });

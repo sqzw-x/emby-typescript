@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource items', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('cancelItems', async () => {
     const responsePromise = client.sync.items.cancelItems('TargetId');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('cancelItems: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -28,7 +28,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listReadyItems: only required params', async () => {
     const responsePromise = client.sync.items.listReadyItems({ TargetId: 'TargetId' });
     const rawResponse = await responsePromise.asResponse();
@@ -40,7 +40,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listReadyItems: required and optional params', async () => {
     const response = await client.sync.items.listReadyItems({ TargetId: 'TargetId' });
   });

@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource jobs', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('cancelJob', async () => {
     const responsePromise = client.sync.jobs.cancelJob('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource jobs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createJob', async () => {
     const responsePromise = client.sync.jobs.createJob({});
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource jobs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listJobs', async () => {
     const responsePromise = client.sync.jobs.listJobs();
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource jobs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveJob', async () => {
     const responsePromise = client.sync.jobs.retrieveJob('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -56,7 +56,7 @@ describe('resource jobs', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateJob', async () => {
     const responsePromise = client.sync.jobs.updateJob(0, {});
     const rawResponse = await responsePromise.asResponse();

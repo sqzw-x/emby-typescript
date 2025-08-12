@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource subtitles', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.providers.subtitles.retrieve('Id');
     const rawResponse = await responsePromise.asResponse();

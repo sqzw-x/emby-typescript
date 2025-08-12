@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource branding', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveConfiguration', async () => {
     const responsePromise = client.branding.retrieveConfiguration();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource branding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveCss', async () => {
     const responsePromise = client.branding.retrieveCss();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource branding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveCssFile', async () => {
     const responsePromise = client.branding.retrieveCssFile();
     const rawResponse = await responsePromise.asResponse();

@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource stream', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.videos.subtitles.stream.retrieve('Format', {
       Id: 'Id',
@@ -24,7 +24,7 @@ describe('resource stream', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.videos.subtitles.stream.retrieve('Format', {
       Id: 'Id',
@@ -36,7 +36,7 @@ describe('resource stream', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveWithPosition: only required params', async () => {
     const responsePromise = client.videos.subtitles.stream.retrieveWithPosition('Format', {
       Id: 'Id',
@@ -53,7 +53,7 @@ describe('resource stream', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveWithPosition: required and optional params', async () => {
     const response = await client.videos.subtitles.stream.retrieveWithPosition('Format', {
       Id: 'Id',

@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource media', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('reportUpdated', async () => {
     const responsePromise = client.libraries.media.reportUpdated({});
     const rawResponse = await responsePromise.asResponse();

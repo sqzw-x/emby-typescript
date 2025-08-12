@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource alternateSources', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.videos.alternateSources.delete('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource alternateSources', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteActive', async () => {
     const responsePromise = client.videos.alternateSources.deleteActive('Id');
     const rawResponse = await responsePromise.asResponse();

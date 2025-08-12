@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource items', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.items.update('ItemId', {});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.items.list();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -141,7 +141,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.items.delete('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -153,7 +153,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createInstantMix', async () => {
     const responsePromise = client.items.createInstantMix('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -165,7 +165,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createInstantMix: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -186,7 +186,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteAll: only required params', async () => {
     const responsePromise = client.items.deleteAll({ Ids: 'Ids' });
     const rawResponse = await responsePromise.asResponse();
@@ -198,12 +198,12 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteAll: required and optional params', async () => {
     const response = await client.items.deleteAll({ Ids: 'Ids' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('downloadMedia', async () => {
     const responsePromise = client.items.downloadMedia('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -215,7 +215,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getAncestors', async () => {
     const responsePromise = client.items.getAncestors('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -227,7 +227,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getAncestors: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -235,7 +235,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getCounts', async () => {
     const responsePromise = client.items.getCounts();
     const rawResponse = await responsePromise.asResponse();
@@ -247,7 +247,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getCounts: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -255,7 +255,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getCriticReviews', async () => {
     const responsePromise = client.items.getCriticReviews('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -267,7 +267,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getCriticReviews: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -275,7 +275,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getDeleteInfo', async () => {
     const responsePromise = client.items.getDeleteInfo('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -287,7 +287,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getExternalIDInfos', async () => {
     const responsePromise = client.items.getExternalIDInfos('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -299,7 +299,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getIntros', async () => {
     const responsePromise = client.items.getIntros();
     const rawResponse = await responsePromise.asResponse();
@@ -311,7 +311,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getMetadataEditor', async () => {
     const responsePromise = client.items.getMetadataEditor('ItemId');
     const rawResponse = await responsePromise.asResponse();
@@ -323,7 +323,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getOriginalFile', async () => {
     const responsePromise = client.items.getOriginalFile('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -335,7 +335,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getSimilarItems', async () => {
     const responsePromise = client.items.getSimilarItems('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -347,7 +347,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getSimilarItems: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -368,7 +368,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getThemeMedia', async () => {
     const responsePromise = client.items.getThemeMedia('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -380,7 +380,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getThemeMedia: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -400,7 +400,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getThemeSongs', async () => {
     const responsePromise = client.items.getThemeSongs('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -412,7 +412,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getThemeSongs: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -432,7 +432,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getThemeVideos', async () => {
     const responsePromise = client.items.getThemeVideos('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -444,7 +444,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getThemeVideos: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -464,7 +464,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getThumbnailSet: only required params', async () => {
     const responsePromise = client.items.getThumbnailSet('Id', { Width: 0 });
     const rawResponse = await responsePromise.asResponse();
@@ -476,12 +476,12 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getThumbnailSet: required and optional params', async () => {
     const response = await client.items.getThumbnailSet('Id', { Width: 0 });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listPrefixes', async () => {
     const responsePromise = client.items.listPrefixes();
     const rawResponse = await responsePromise.asResponse();
@@ -493,7 +493,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listPrefixes: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -602,7 +602,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('makePrivate', async () => {
     const responsePromise = client.items.makePrivate('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -614,7 +614,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('makePublic', async () => {
     const responsePromise = client.items.makePublic('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -626,7 +626,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('refreshMetadata', async () => {
     const responsePromise = client.items.refreshMetadata('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -638,7 +638,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('refreshMetadata: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -656,7 +656,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateAccess', async () => {
     const responsePromise = client.items.updateAccess({});
     const rawResponse = await responsePromise.asResponse();
