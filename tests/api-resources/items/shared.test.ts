@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource shared', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('leave', async () => {
     const responsePromise = client.items.shared.leave({});
     const rawResponse = await responsePromise.asResponse();

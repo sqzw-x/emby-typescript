@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource tags', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.items.tags.delete('Id', {});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource tags', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('add', async () => {
     const responsePromise = client.items.tags.add('Id', {});
     const rawResponse = await responsePromise.asResponse();

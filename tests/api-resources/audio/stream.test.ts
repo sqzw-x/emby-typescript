@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource stream', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.audio.stream.retrieve('Id', { Container: 'Container' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource stream', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.audio.stream.retrieve('Id', {
       Container: 'Container',
@@ -49,7 +49,7 @@ describe('resource stream', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveWithContainer: only required params', async () => {
     const responsePromise = client.audio.stream.retrieveWithContainer('Container', { Id: 'Id' });
     const rawResponse = await responsePromise.asResponse();
@@ -61,7 +61,7 @@ describe('resource stream', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveWithContainer: required and optional params', async () => {
     const response = await client.audio.stream.retrieveWithContainer('Container', {
       Id: 'Id',

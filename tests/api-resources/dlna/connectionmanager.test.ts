@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource connectionmanager', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.dlna.connectionmanager.retrieve('UuId');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource connectionmanager', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('processControl', async () => {
     const responsePromise = client.dlna.connectionmanager.processControl(
       'UuId',
@@ -35,7 +35,7 @@ describe('resource connectionmanager', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveXml', async () => {
     const responsePromise = client.dlna.connectionmanager.retrieveXml('UuId');
     const rawResponse = await responsePromise.asResponse();

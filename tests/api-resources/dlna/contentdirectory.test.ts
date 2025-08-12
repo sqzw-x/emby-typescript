@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource contentdirectory', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.dlna.contentdirectory.retrieve('UuId');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource contentdirectory', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('processControl', async () => {
     const responsePromise = client.dlna.contentdirectory.processControl(
       'UuId',
@@ -35,7 +35,7 @@ describe('resource contentdirectory', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveXml', async () => {
     const responsePromise = client.dlna.contentdirectory.retrieveXml('UuId');
     const rawResponse = await responsePromise.asResponse();

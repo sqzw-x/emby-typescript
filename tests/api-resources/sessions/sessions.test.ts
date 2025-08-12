@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource sessions', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.sessions.list();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource sessions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -31,7 +31,7 @@ describe('resource sessions', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getPlayQueue', async () => {
     const responsePromise = client.sessions.getPlayQueue();
     const rawResponse = await responsePromise.asResponse();
@@ -43,7 +43,7 @@ describe('resource sessions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getPlayQueue: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -51,7 +51,7 @@ describe('resource sessions', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('issueSystemCommand: only required params', async () => {
     const responsePromise = client.sessions.issueSystemCommand('Command', { Id: 'Id' });
     const rawResponse = await responsePromise.asResponse();
@@ -63,12 +63,12 @@ describe('resource sessions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('issueSystemCommand: required and optional params', async () => {
     const response = await client.sessions.issueSystemCommand('Command', { Id: 'Id' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('logout', async () => {
     const responsePromise = client.sessions.logout();
     const rawResponse = await responsePromise.asResponse();
@@ -80,7 +80,7 @@ describe('resource sessions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('sendMessage: only required params', async () => {
     const responsePromise = client.sessions.sendMessage('Id', { Header: 'Header', Text: 'Text' });
     const rawResponse = await responsePromise.asResponse();
@@ -92,7 +92,7 @@ describe('resource sessions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('sendMessage: required and optional params', async () => {
     const response = await client.sessions.sendMessage('Id', {
       Header: 'Header',
@@ -101,7 +101,7 @@ describe('resource sessions', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('viewItem: only required params', async () => {
     const responsePromise = client.sessions.viewItem('Id', {
       ItemId: 'ItemId',
@@ -117,7 +117,7 @@ describe('resource sessions', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('viewItem: required and optional params', async () => {
     const response = await client.sessions.viewItem('Id', {
       ItemId: 'ItemId',

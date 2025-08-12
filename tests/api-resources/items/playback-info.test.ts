@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource playbackInfo', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.items.playbackInfo.retrieve('Id', { UserId: 'UserId' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource playbackInfo', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.items.playbackInfo.retrieve('Id', { UserId: 'UserId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.items.playbackInfo.update('Id', {});
     const rawResponse = await responsePromise.asResponse();

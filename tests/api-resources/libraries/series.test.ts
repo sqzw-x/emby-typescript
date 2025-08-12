@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource series', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('added', async () => {
     const responsePromise = client.libraries.series.added();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource series', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updated', async () => {
     const responsePromise = client.libraries.series.updated();
     const rawResponse = await responsePromise.asResponse();

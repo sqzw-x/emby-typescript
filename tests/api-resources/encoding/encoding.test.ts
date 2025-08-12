@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource encoding', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getCodecConfigurationDefaults', async () => {
     const responsePromise = client.encoding.getCodecConfigurationDefaults();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource encoding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getCodecInformationVideo', async () => {
     const responsePromise = client.encoding.getCodecInformationVideo();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource encoding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getCodecParameters: only required params', async () => {
     const responsePromise = client.encoding.getCodecParameters({
       CodecId: 'CodecId',
@@ -47,7 +47,7 @@ describe('resource encoding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getCodecParameters: required and optional params', async () => {
     const response = await client.encoding.getCodecParameters({
       CodecId: 'CodecId',
@@ -55,7 +55,7 @@ describe('resource encoding', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getFfmpegOptions', async () => {
     const responsePromise = client.encoding.getFfmpegOptions();
     const rawResponse = await responsePromise.asResponse();
@@ -67,7 +67,7 @@ describe('resource encoding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getFullToneMapOptions', async () => {
     const responsePromise = client.encoding.getFullToneMapOptions();
     const rawResponse = await responsePromise.asResponse();
@@ -79,7 +79,7 @@ describe('resource encoding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getPublicToneMapOptions', async () => {
     const responsePromise = client.encoding.getPublicToneMapOptions();
     const rawResponse = await responsePromise.asResponse();
@@ -91,7 +91,7 @@ describe('resource encoding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getSubtitleOptions', async () => {
     const responsePromise = client.encoding.getSubtitleOptions();
     const rawResponse = await responsePromise.asResponse();
@@ -103,7 +103,7 @@ describe('resource encoding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getToneMapOptions', async () => {
     const responsePromise = client.encoding.getToneMapOptions();
     const rawResponse = await responsePromise.asResponse();
@@ -115,7 +115,7 @@ describe('resource encoding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateCodecParameters: only required params', async () => {
     const responsePromise = client.encoding.updateCodecParameters(
       await toFile(Buffer.from('# my file contents'), 'README.md'),
@@ -130,7 +130,7 @@ describe('resource encoding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateCodecParameters: required and optional params', async () => {
     const response = await client.encoding.updateCodecParameters(
       await toFile(Buffer.from('# my file contents'), 'README.md'),
@@ -138,7 +138,7 @@ describe('resource encoding', () => {
     );
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateFfmpegOptions', async () => {
     const responsePromise = client.encoding.updateFfmpegOptions(
       await toFile(Buffer.from('# my file contents'), 'README.md'),
@@ -152,7 +152,7 @@ describe('resource encoding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateFullToneMapOptions', async () => {
     const responsePromise = client.encoding.updateFullToneMapOptions(
       await toFile(Buffer.from('# my file contents'), 'README.md'),
@@ -166,7 +166,7 @@ describe('resource encoding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updatePublicToneMapOptions', async () => {
     const responsePromise = client.encoding.updatePublicToneMapOptions(
       await toFile(Buffer.from('# my file contents'), 'README.md'),
@@ -180,7 +180,7 @@ describe('resource encoding', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updateSubtitleOptions', async () => {
     const responsePromise = client.encoding.updateSubtitleOptions(
       await toFile(Buffer.from('# my file contents'), 'README.md'),

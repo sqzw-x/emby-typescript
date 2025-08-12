@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource schedulesDirect', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listCountries', async () => {
     const responsePromise = client.liveTv.listingProviders.schedulesDirect.listCountries();
     const rawResponse = await responsePromise.asResponse();

@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource remoteImages', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('download: only required params', async () => {
     const responsePromise = client.items.remoteImages.download('Id', { Type: 'Primary' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource remoteImages', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('download: required and optional params', async () => {
     const response = await client.items.remoteImages.download('Id', {
       Type: 'Primary',
@@ -29,7 +29,7 @@ describe('resource remoteImages', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveAll', async () => {
     const responsePromise = client.items.remoteImages.retrieveAll('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -41,7 +41,7 @@ describe('resource remoteImages', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveAll: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -53,7 +53,7 @@ describe('resource remoteImages', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveProviders', async () => {
     const responsePromise = client.items.remoteImages.retrieveProviders('Id');
     const rawResponse = await responsePromise.asResponse();

@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource connect', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listPending', async () => {
     const responsePromise = client.connect.listPending();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource connect', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveExchange: only required params', async () => {
     const responsePromise = client.connect.retrieveExchange({ ConnectUserId: 'ConnectUserId' });
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource connect', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveExchange: required and optional params', async () => {
     const response = await client.connect.retrieveExchange({ ConnectUserId: 'ConnectUserId' });
   });

@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource shows', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listEpisodes', async () => {
     const responsePromise = client.shows.listEpisodes('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource shows', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listEpisodes: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -133,7 +133,7 @@ describe('resource shows', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listMissing', async () => {
     const responsePromise = client.shows.listMissing();
     const rawResponse = await responsePromise.asResponse();
@@ -145,7 +145,7 @@ describe('resource shows', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listMissing: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -254,7 +254,7 @@ describe('resource shows', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listNextUp: only required params', async () => {
     const responsePromise = client.shows.listNextUp({ UserId: 'UserId' });
     const rawResponse = await responsePromise.asResponse();
@@ -266,7 +266,7 @@ describe('resource shows', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listNextUp: required and optional params', async () => {
     const response = await client.shows.listNextUp({
       UserId: 'UserId',
@@ -282,7 +282,7 @@ describe('resource shows', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listSeasons: only required params', async () => {
     const responsePromise = client.shows.listSeasons('Id', { UserId: 'UserId' });
     const rawResponse = await responsePromise.asResponse();
@@ -294,7 +294,7 @@ describe('resource shows', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listSeasons: required and optional params', async () => {
     const response = await client.shows.listSeasons('Id', {
       UserId: 'UserId',
@@ -308,7 +308,7 @@ describe('resource shows', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listSimilar', async () => {
     const responsePromise = client.shows.listSimilar('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -320,7 +320,7 @@ describe('resource shows', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listSimilar: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -341,7 +341,7 @@ describe('resource shows', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listUpcoming', async () => {
     const responsePromise = client.shows.listUpcoming();
     const rawResponse = await responsePromise.asResponse();
@@ -353,7 +353,7 @@ describe('resource shows', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listUpcoming: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

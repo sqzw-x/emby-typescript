@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource sync', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getItemStatus', async () => {
     const responsePromise = client.sync.getItemStatus('ItemId', {});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource sync', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listOptions: only required params', async () => {
     const responsePromise = client.sync.listOptions({ UserId: 'UserId' });
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource sync', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listOptions: required and optional params', async () => {
     const response = await client.sync.listOptions({
       UserId: 'UserId',
@@ -43,7 +43,7 @@ describe('resource sync', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listTargets: only required params', async () => {
     const responsePromise = client.sync.listTargets({ UserId: 'UserId' });
     const rawResponse = await responsePromise.asResponse();
@@ -55,12 +55,12 @@ describe('resource sync', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listTargets: required and optional params', async () => {
     const response = await client.sync.listTargets({ UserId: 'UserId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('reportOfflineAction: only required params', async () => {
     const responsePromise = client.sync.reportOfflineAction({ body: [{}] });
     const rawResponse = await responsePromise.asResponse();
@@ -72,7 +72,7 @@ describe('resource sync', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('reportOfflineAction: required and optional params', async () => {
     const response = await client.sync.reportOfflineAction({
       body: [
@@ -91,7 +91,7 @@ describe('resource sync', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('syncData: only required params', async () => {
     const responsePromise = client.sync.syncData({ TargetId: 'TargetId' });
     const rawResponse = await responsePromise.asResponse();
@@ -103,7 +103,7 @@ describe('resource sync', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('syncData: required and optional params', async () => {
     const response = await client.sync.syncData({
       TargetId: 'TargetId',

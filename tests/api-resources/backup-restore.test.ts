@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource backupRestore', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('backupInfo', async () => {
     const responsePromise = client.backupRestore.backupInfo();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource backupRestore', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('restore', async () => {
     const responsePromise = client.backupRestore.restore({});
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource backupRestore', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('restoreData', async () => {
     const responsePromise = client.backupRestore.restoreData({});
     const rawResponse = await responsePromise.asResponse();

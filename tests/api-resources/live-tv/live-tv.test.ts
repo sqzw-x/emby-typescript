@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource liveTv', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listAvailableRecordingOptions', async () => {
     const responsePromise = client.liveTv.listAvailableRecordingOptions();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource liveTv', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveEpg', async () => {
     const responsePromise = client.liveTv.retrieveEpg();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource liveTv', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveEpg: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -147,7 +147,7 @@ describe('resource liveTv', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveFolder', async () => {
     const responsePromise = client.liveTv.retrieveFolder();
     const rawResponse = await responsePromise.asResponse();
@@ -159,7 +159,7 @@ describe('resource liveTv', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveGuideInfo', async () => {
     const responsePromise = client.liveTv.retrieveGuideInfo();
     const rawResponse = await responsePromise.asResponse();
@@ -171,7 +171,7 @@ describe('resource liveTv', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveInfo', async () => {
     const responsePromise = client.liveTv.retrieveInfo();
     const rawResponse = await responsePromise.asResponse();

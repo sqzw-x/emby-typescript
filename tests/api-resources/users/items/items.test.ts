@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource items', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: only required params', async () => {
     const responsePromise = client.users.items.retrieve('Id', { UserId: 'UserId' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: required and optional params', async () => {
     const response = await client.users.items.retrieve('Id', { UserId: 'UserId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('hideFromResume: only required params', async () => {
     const responsePromise = client.users.items.hideFromResume('Id', { UserId: 'UserId', Hide: true });
     const rawResponse = await responsePromise.asResponse();
@@ -37,12 +37,12 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('hideFromResume: required and optional params', async () => {
     const response = await client.users.items.hideFromResume('Id', { UserId: 'UserId', Hide: true });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveIntros: only required params', async () => {
     const responsePromise = client.users.items.retrieveIntros('Id', { UserId: 'UserId' });
     const rawResponse = await responsePromise.asResponse();
@@ -54,7 +54,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveIntros: required and optional params', async () => {
     const response = await client.users.items.retrieveIntros('Id', {
       UserId: 'UserId',
@@ -66,7 +66,7 @@ describe('resource items', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveItems', async () => {
     const responsePromise = client.users.items.retrieveItems('UserId');
     const rawResponse = await responsePromise.asResponse();
@@ -78,7 +78,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveItems: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -187,7 +187,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveLatest', async () => {
     const responsePromise = client.users.items.retrieveLatest('UserId');
     const rawResponse = await responsePromise.asResponse();
@@ -199,7 +199,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveLatest: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -224,7 +224,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveLocalTrailers: only required params', async () => {
     const responsePromise = client.users.items.retrieveLocalTrailers('Id', { UserId: 'UserId' });
     const rawResponse = await responsePromise.asResponse();
@@ -236,7 +236,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveLocalTrailers: required and optional params', async () => {
     const response = await client.users.items.retrieveLocalTrailers('Id', {
       UserId: 'UserId',
@@ -248,7 +248,7 @@ describe('resource items', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveResume', async () => {
     const responsePromise = client.users.items.retrieveResume('UserId');
     const rawResponse = await responsePromise.asResponse();
@@ -260,7 +260,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveResume: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -369,7 +369,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveRoot', async () => {
     const responsePromise = client.users.items.retrieveRoot('UserId');
     const rawResponse = await responsePromise.asResponse();
@@ -381,7 +381,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveSpecialFeatures: only required params', async () => {
     const responsePromise = client.users.items.retrieveSpecialFeatures('Id', { UserId: 'UserId' });
     const rawResponse = await responsePromise.asResponse();
@@ -393,7 +393,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveSpecialFeatures: required and optional params', async () => {
     const response = await client.users.items.retrieveSpecialFeatures('Id', {
       UserId: 'UserId',
@@ -405,7 +405,7 @@ describe('resource items', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('userData: only required params', async () => {
     const responsePromise = client.users.items.userData('ItemId', { UserId: 'UserId' });
     const rawResponse = await responsePromise.asResponse();
@@ -417,7 +417,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('userData: required and optional params', async () => {
     const response = await client.users.items.userData('ItemId', {
       UserId: 'UserId',

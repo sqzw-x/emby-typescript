@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource environment', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('defaultDirectoryBrowser', async () => {
     const responsePromise = client.environment.defaultDirectoryBrowser();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource environment', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('drives', async () => {
     const responsePromise = client.environment.drives();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource environment', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('networkDevices', async () => {
     const responsePromise = client.environment.networkDevices();
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource environment', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('networkShares: only required params', async () => {
     const responsePromise = client.environment.networkShares({ Path: 'Path' });
     const rawResponse = await responsePromise.asResponse();
@@ -56,12 +56,12 @@ describe('resource environment', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('networkShares: required and optional params', async () => {
     const response = await client.environment.networkShares({ Path: 'Path' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('parentPath: only required params', async () => {
     const responsePromise = client.environment.parentPath({ Path: 'Path' });
     const rawResponse = await responsePromise.asResponse();
@@ -73,12 +73,12 @@ describe('resource environment', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('parentPath: required and optional params', async () => {
     const response = await client.environment.parentPath({ Path: 'Path' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('validatePath: only required params', async () => {
     const responsePromise = client.environment.validatePath({ Path: 'Path' });
     const rawResponse = await responsePromise.asResponse();
@@ -90,7 +90,7 @@ describe('resource environment', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('validatePath: required and optional params', async () => {
     const response = await client.environment.validatePath({
       Path: 'Path',

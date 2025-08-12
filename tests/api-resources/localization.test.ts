@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource localization', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getCountries', async () => {
     const responsePromise = client.localization.getCountries();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource localization', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getCultures', async () => {
     const responsePromise = client.localization.getCultures();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource localization', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getOptions', async () => {
     const responsePromise = client.localization.getOptions();
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource localization', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getParentalRatings', async () => {
     const responsePromise = client.localization.getParentalRatings();
     const rawResponse = await responsePromise.asResponse();

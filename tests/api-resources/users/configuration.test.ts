@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource configuration', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.users.configuration.update('Id', {});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource configuration', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('updatePartial', async () => {
     const responsePromise = client.users.configuration.updatePartial(
       'Id',

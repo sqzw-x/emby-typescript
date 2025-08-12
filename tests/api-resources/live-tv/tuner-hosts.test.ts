@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource tunerHosts', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.liveTv.tunerHosts.create({});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource tunerHosts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.liveTv.tunerHosts.list();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource tunerHosts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.liveTv.tunerHosts.delete();
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource tunerHosts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -52,7 +52,7 @@ describe('resource tunerHosts', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getDefault', async () => {
     const responsePromise = client.liveTv.tunerHosts.getDefault('Type');
     const rawResponse = await responsePromise.asResponse();
@@ -64,7 +64,7 @@ describe('resource tunerHosts', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listTypes', async () => {
     const responsePromise = client.liveTv.tunerHosts.listTypes();
     const rawResponse = await responsePromise.asResponse();
