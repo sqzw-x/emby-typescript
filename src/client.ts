@@ -1068,6 +1068,7 @@ export class Emby {
   providers: API.Providers = new API.Providers(this);
   libraries: API.Libraries = new API.Libraries(this);
 }
+
 Emby.Artists = Artists;
 Emby.AudioCodecs = AudioCodecs;
 Emby.AudioLayouts = AudioLayouts;
@@ -1128,6 +1129,7 @@ Emby.Games = Games;
 Emby.Songs = Songs;
 Emby.Providers = Providers;
 Emby.Libraries = Libraries;
+
 export declare namespace Emby {
   export type RequestOptions = Opts.RequestOptions;
 
