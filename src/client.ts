@@ -148,10 +148,6 @@ import {
   EncodingGetCodecParametersParams,
   EncodingGetToneMapOptionsResponse,
   EncodingUpdateCodecParametersParams,
-  EncodingUpdateFfmpegOptionsParams,
-  EncodingUpdateFullToneMapOptionsParams,
-  EncodingUpdatePublicToneMapOptionsParams,
-  EncodingUpdateSubtitleOptionsParams,
 } from './resources/encoding/encoding';
 import {
   Environment,
@@ -972,7 +968,7 @@ export class Emby {
         // Preserve legacy string encoding behavior for now
         headers.values.has('content-type')) ||
       // `Blob` is superset of `File`
-      body instanceof Blob ||
+      ((globalThis as any).Blob && body instanceof (globalThis as any).Blob) ||
       // `FormData` -> `multipart/form-data`
       body instanceof FormData ||
       // `URLSearchParams` -> `application/x-www-form-urlencoded`
@@ -1072,6 +1068,7 @@ export class Emby {
   providers: API.Providers = new API.Providers(this);
   libraries: API.Libraries = new API.Libraries(this);
 }
+
 Emby.Artists = Artists;
 Emby.AudioCodecs = AudioCodecs;
 Emby.AudioLayouts = AudioLayouts;
@@ -1132,6 +1129,7 @@ Emby.Games = Games;
 Emby.Songs = Songs;
 Emby.Providers = Providers;
 Emby.Libraries = Libraries;
+
 export declare namespace Emby {
   export type RequestOptions = Opts.RequestOptions;
 
@@ -1366,10 +1364,6 @@ export declare namespace Emby {
     type EncodingGetToneMapOptionsResponse as EncodingGetToneMapOptionsResponse,
     type EncodingGetCodecParametersParams as EncodingGetCodecParametersParams,
     type EncodingUpdateCodecParametersParams as EncodingUpdateCodecParametersParams,
-    type EncodingUpdateFfmpegOptionsParams as EncodingUpdateFfmpegOptionsParams,
-    type EncodingUpdateFullToneMapOptionsParams as EncodingUpdateFullToneMapOptionsParams,
-    type EncodingUpdatePublicToneMapOptionsParams as EncodingUpdatePublicToneMapOptionsParams,
-    type EncodingUpdateSubtitleOptionsParams as EncodingUpdateSubtitleOptionsParams,
   };
 
   export {

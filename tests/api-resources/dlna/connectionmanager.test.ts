@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource connectionmanager', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.dlna.connectionmanager.retrieve('UuId');
     const rawResponse = await responsePromise.asResponse();
@@ -20,11 +20,12 @@ describe('resource connectionmanager', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('processControl: only required params', async () => {
-    const responsePromise = client.dlna.connectionmanager.processControl('UuId', {
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+  // Prism tests are disabled
+  test.skip('processControl', async () => {
+    const responsePromise = client.dlna.connectionmanager.processControl(
+      'UuId',
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+    );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -34,14 +35,7 @@ describe('resource connectionmanager', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
-  test.skip('processControl: required and optional params', async () => {
-    const response = await client.dlna.connectionmanager.processControl('UuId', {
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
-  });
-
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveXml', async () => {
     const responsePromise = client.dlna.connectionmanager.retrieveXml('UuId');
     const rawResponse = await responsePromise.asResponse();

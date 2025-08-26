@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource playback', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('bitrateTest: only required params', async () => {
     const responsePromise = client.playback.bitrateTest({ Size: 0 });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource playback', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('bitrateTest: required and optional params', async () => {
     const response = await client.playback.bitrateTest({ Size: 0 });
   });

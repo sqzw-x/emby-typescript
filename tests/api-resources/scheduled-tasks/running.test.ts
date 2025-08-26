@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource running', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('forceStop', async () => {
     const responsePromise = client.scheduledTasks.running.forceStop('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource running', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('start', async () => {
     const responsePromise = client.scheduledTasks.running.start('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource running', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('stop', async () => {
     const responsePromise = client.scheduledTasks.running.stop('Id');
     const rawResponse = await responsePromise.asResponse();

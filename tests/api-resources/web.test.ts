@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource web', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listConfigurationPages', async () => {
     const responsePromise = client.web.listConfigurationPages();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource web', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listStrings', async () => {
     const responsePromise = client.web.listStrings();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource web', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveConfigurationPage', async () => {
     const responsePromise = client.web.retrieveConfigurationPage();
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource web', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveStringSet', async () => {
     const responsePromise = client.web.retrieveStringSet();
     const rawResponse = await responsePromise.asResponse();

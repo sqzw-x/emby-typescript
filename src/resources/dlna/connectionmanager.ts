@@ -22,10 +22,9 @@ export class Connectionmanager extends APIResource {
    */
   processControl(
     uuID: string,
-    params: ConnectionmanagerProcessControlParams,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { body } = params;
     return this._client.post(path`/Dlna/${uuID}/connectionmanager/control`, {
       body: body,
       ...options,
@@ -45,12 +44,4 @@ export class Connectionmanager extends APIResource {
       headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
     });
   }
-}
-
-export interface ConnectionmanagerProcessControlParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
-export declare namespace Connectionmanager {
-  export { type ConnectionmanagerProcessControlParams as ConnectionmanagerProcessControlParams };
 }

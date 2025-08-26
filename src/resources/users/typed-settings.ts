@@ -21,8 +21,13 @@ export class TypedSettings extends APIResource {
   /**
    * Requires authentication as user
    */
-  update(key: string, params: TypedSettingUpdateParams, options?: RequestOptions): APIPromise<void> {
-    const { UserId, body } = params;
+  update(
+    key: string,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    params: TypedSettingUpdateParams,
+    options?: RequestOptions,
+  ): APIPromise<void> {
+    const { UserId } = params;
     return this._client.post(path`/Users/${UserId}/TypedSettings/${key}`, {
       body: body,
       ...options,
@@ -43,11 +48,6 @@ export interface TypedSettingUpdateParams {
    * Path param:
    */
   UserId: string;
-
-  /**
-   * Body param:
-   */
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
 }
 
 export declare namespace TypedSettings {

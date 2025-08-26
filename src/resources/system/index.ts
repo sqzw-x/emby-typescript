@@ -5,13 +5,7 @@ export {
   type ActivityLogListEntriesResponse,
   type ActivityLogListEntriesParams,
 } from './activity-log';
-export {
-  Configuration,
-  type ServerConfiguration,
-  type ConfigurationUpdateParams,
-  type ConfigurationUpdateNamedParams,
-  type ConfigurationUpdatePartialParams,
-} from './configuration';
+export { Configuration, type ServerConfiguration, type ConfigurationUpdateParams } from './configuration';
 export { Info, type InfoRetrieveResponse, type InfoRetrievePublicResponse } from './info';
 export {
   Logs,

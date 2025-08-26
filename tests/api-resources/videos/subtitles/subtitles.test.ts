@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource subtitles', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.videos.subtitles.delete(0, { Id: 'Id', MediaSourceId: 'MediaSourceId' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource subtitles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.videos.subtitles.delete(0, { Id: 'Id', MediaSourceId: 'MediaSourceId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteActive: only required params', async () => {
     const responsePromise = client.videos.subtitles.deleteActive(0, {
       Id: 'Id',
@@ -40,7 +40,7 @@ describe('resource subtitles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteActive: required and optional params', async () => {
     const response = await client.videos.subtitles.deleteActive(0, {
       Id: 'Id',

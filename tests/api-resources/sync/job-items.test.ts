@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource jobItems', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('cancelJobItem', async () => {
     const responsePromise = client.sync.jobItems.cancelJobItem('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource jobItems', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('enableJobItem', async () => {
     const responsePromise = client.sync.jobItems.enableJobItem('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource jobItems', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getAdditionalFiles: only required params', async () => {
     const responsePromise = client.sync.jobItems.getAdditionalFiles('Id', { Name: 'Name' });
     const rawResponse = await responsePromise.asResponse();
@@ -44,12 +44,12 @@ describe('resource jobItems', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getAdditionalFiles: required and optional params', async () => {
     const response = await client.sync.jobItems.getAdditionalFiles('Id', { Name: 'Name' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getFile', async () => {
     const responsePromise = client.sync.jobItems.getFile('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -61,7 +61,7 @@ describe('resource jobItems', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listJobItems: only required params', async () => {
     const responsePromise = client.sync.jobItems.listJobItems({ TargetId: 'TargetId' });
     const rawResponse = await responsePromise.asResponse();
@@ -73,12 +73,12 @@ describe('resource jobItems', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listJobItems: required and optional params', async () => {
     const response = await client.sync.jobItems.listJobItems({ TargetId: 'TargetId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('markForRemoval', async () => {
     const responsePromise = client.sync.jobItems.markForRemoval('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -90,7 +90,7 @@ describe('resource jobItems', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('reportTransferred', async () => {
     const responsePromise = client.sync.jobItems.reportTransferred('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -102,7 +102,7 @@ describe('resource jobItems', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('unmarkForRemoval', async () => {
     const responsePromise = client.sync.jobItems.unmarkForRemoval('Id');
     const rawResponse = await responsePromise.asResponse();

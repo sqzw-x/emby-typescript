@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource link', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.users.connect.link.delete('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource link', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteLink', async () => {
     const responsePromise = client.users.connect.link.deleteLink('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource link', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('link: only required params', async () => {
     const responsePromise = client.users.connect.link.link('Id', { ConnectUsername: 'ConnectUsername' });
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource link', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('link: required and optional params', async () => {
     const response = await client.users.connect.link.link('Id', { ConnectUsername: 'ConnectUsername' });
   });

@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource movies', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getRecommendations', async () => {
     const responsePromise = client.movies.getRecommendations();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource movies', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getRecommendations: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -40,7 +40,7 @@ describe('resource movies', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getSimilar', async () => {
     const responsePromise = client.movies.getSimilar('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -52,7 +52,7 @@ describe('resource movies', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getSimilar: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

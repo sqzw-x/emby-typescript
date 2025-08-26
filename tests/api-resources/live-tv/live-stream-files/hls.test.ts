@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource hls', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getLive', async () => {
     const responsePromise = client.liveTv.liveStreamFiles.hls.getLive('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource hls', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getMaster', async () => {
     const responsePromise = client.liveTv.liveStreamFiles.hls.getMaster('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource hls', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getSegment: only required params', async () => {
     const responsePromise = client.liveTv.liveStreamFiles.hls.getSegment('Segment', { Id: 'Id' });
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource hls', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getSegment: required and optional params', async () => {
     const response = await client.liveTv.liveStreamFiles.hls.getSegment('Segment', { Id: 'Id' });
   });

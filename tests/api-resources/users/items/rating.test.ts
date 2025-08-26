@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource rating', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.users.items.rating.delete('Id', { UserId: 'UserId' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource rating', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.users.items.rating.delete('Id', { UserId: 'UserId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteRating: only required params', async () => {
     const responsePromise = client.users.items.rating.deleteRating('Id', { UserId: 'UserId' });
     const rawResponse = await responsePromise.asResponse();
@@ -37,12 +37,12 @@ describe('resource rating', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteRating: required and optional params', async () => {
     const response = await client.users.items.rating.deleteRating('Id', { UserId: 'UserId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('rating: only required params', async () => {
     const responsePromise = client.users.items.rating.rating('Id', { UserId: 'UserId', Likes: true });
     const rawResponse = await responsePromise.asResponse();
@@ -54,7 +54,7 @@ describe('resource rating', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('rating: required and optional params', async () => {
     const response = await client.users.items.rating.rating('Id', { UserId: 'UserId', Likes: true });
   });

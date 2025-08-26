@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource videos', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('mergeVersions', async () => {
     const responsePromise = client.videos.mergeVersions();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource videos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('mergeVersions: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -28,7 +28,7 @@ describe('resource videos', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveAdditionalParts', async () => {
     const responsePromise = client.videos.retrieveAdditionalParts('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -40,7 +40,7 @@ describe('resource videos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveAdditionalParts: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -59,7 +59,7 @@ describe('resource videos', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveHlsSegment: only required params', async () => {
     const responsePromise = client.videos.retrieveHlsSegment('SegmentContainer', {
       Id: 'Id',
@@ -75,7 +75,7 @@ describe('resource videos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveHlsSegment: required and optional params', async () => {
     const response = await client.videos.retrieveHlsSegment('SegmentContainer', {
       Id: 'Id',
@@ -84,7 +84,7 @@ describe('resource videos', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveHlsSegment1: only required params', async () => {
     const responsePromise = client.videos.retrieveHlsSegment1('SegmentContainer', {
       Id: 'Id',
@@ -100,7 +100,7 @@ describe('resource videos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveHlsSegment1: required and optional params', async () => {
     const response = await client.videos.retrieveHlsSegment1('SegmentContainer', {
       Id: 'Id',
@@ -109,7 +109,7 @@ describe('resource videos', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveIndexBif: only required params', async () => {
     const responsePromise = client.videos.retrieveIndexBif('Id', { Width: 0 });
     const rawResponse = await responsePromise.asResponse();
@@ -121,12 +121,12 @@ describe('resource videos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveIndexBif: required and optional params', async () => {
     const response = await client.videos.retrieveIndexBif('Id', { Width: 0 });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveLiveStream: only required params', async () => {
     const responsePromise = client.videos.retrieveLiveStream('Id', { Container: 'Container' });
     const rawResponse = await responsePromise.asResponse();
@@ -138,7 +138,7 @@ describe('resource videos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveLiveStream: required and optional params', async () => {
     const response = await client.videos.retrieveLiveStream('Id', {
       Container: 'Container',
@@ -167,7 +167,7 @@ describe('resource videos', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveLiveSubtitlesPlaylist: only required params', async () => {
     const responsePromise = client.videos.retrieveLiveSubtitlesPlaylist('Id', {
       ManifestSubtitles: 'ManifestSubtitles',
@@ -182,7 +182,7 @@ describe('resource videos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveLiveSubtitlesPlaylist: required and optional params', async () => {
     const response = await client.videos.retrieveLiveSubtitlesPlaylist('Id', {
       ManifestSubtitles: 'ManifestSubtitles',
@@ -190,7 +190,7 @@ describe('resource videos', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveMainStream: only required params', async () => {
     const responsePromise = client.videos.retrieveMainStream('Id', { Container: 'Container' });
     const rawResponse = await responsePromise.asResponse();
@@ -202,7 +202,7 @@ describe('resource videos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveMainStream: required and optional params', async () => {
     const response = await client.videos.retrieveMainStream('Id', {
       Container: 'Container',
@@ -231,7 +231,7 @@ describe('resource videos', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveMasterStream: only required params', async () => {
     const responsePromise = client.videos.retrieveMasterStream('Id', { Container: 'Container' });
     const rawResponse = await responsePromise.asResponse();
@@ -243,7 +243,7 @@ describe('resource videos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveMasterStream: required and optional params', async () => {
     const response = await client.videos.retrieveMasterStream('Id', {
       Container: 'Container',
@@ -272,7 +272,7 @@ describe('resource videos', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveStream: only required params', async () => {
     const responsePromise = client.videos.retrieveStream('StreamFileName', {
       Id: 'Id',
@@ -287,7 +287,7 @@ describe('resource videos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveStream: required and optional params', async () => {
     const response = await client.videos.retrieveStream('StreamFileName', {
       Id: 'Id',
@@ -317,7 +317,7 @@ describe('resource videos', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveSubtitlesPlaylist: only required params', async () => {
     const responsePromise = client.videos.retrieveSubtitlesPlaylist('Id', {
       ManifestSubtitles: 'ManifestSubtitles',
@@ -332,7 +332,7 @@ describe('resource videos', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveSubtitlesPlaylist: required and optional params', async () => {
     const response = await client.videos.retrieveSubtitlesPlaylist('Id', {
       ManifestSubtitles: 'ManifestSubtitles',

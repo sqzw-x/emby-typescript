@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource tuners', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('discover', async () => {
     const responsePromise = client.liveTv.tuners.discover();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource tuners', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('reset', async () => {
     const responsePromise = client.liveTv.tuners.reset('Id');
     const rawResponse = await responsePromise.asResponse();

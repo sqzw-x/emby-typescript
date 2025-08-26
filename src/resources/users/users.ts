@@ -6,12 +6,7 @@ import * as AuthAPI from '../auth/auth';
 import * as ItemsAPI from '../items/items';
 import * as SessionsAPI from '../sessions/sessions';
 import * as ConfigurationAPI from './configuration';
-import {
-  Configuration,
-  ConfigurationUpdateParams,
-  ConfigurationUpdatePartialParams,
-  UserConfiguration,
-} from './configuration';
+import { Configuration, ConfigurationUpdateParams, UserConfiguration } from './configuration';
 import * as FavoriteItemsAPI from './favorite-items';
 import {
   FavoriteItemDeleteParams,
@@ -816,7 +811,6 @@ export declare namespace Users {
     Configuration as Configuration,
     type UserConfiguration as UserConfiguration,
     type ConfigurationUpdateParams as ConfigurationUpdateParams,
-    type ConfigurationUpdatePartialParams as ConfigurationUpdatePartialParams,
   };
 
   export {

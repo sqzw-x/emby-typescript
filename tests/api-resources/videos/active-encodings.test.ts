@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource activeEncodings', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.videos.activeEncodings.delete({
       DeviceId: 'DeviceId',
@@ -23,7 +23,7 @@ describe('resource activeEncodings', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.videos.activeEncodings.delete({
       DeviceId: 'DeviceId',
@@ -31,7 +31,7 @@ describe('resource activeEncodings', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteActive: only required params', async () => {
     const responsePromise = client.videos.activeEncodings.deleteActive({
       DeviceId: 'DeviceId',
@@ -46,7 +46,7 @@ describe('resource activeEncodings', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteActive: required and optional params', async () => {
     const response = await client.videos.activeEncodings.deleteActive({
       DeviceId: 'DeviceId',

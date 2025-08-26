@@ -128,11 +128,16 @@ export class Images extends APIResource {
   /**
    * Requires authentication as administrator
    */
-  upload(type: ImageType, params: ImageUploadParams, options?: RequestOptions): APIPromise<void> {
-    const { Id, body, Index } = params;
+  upload(
+    type: ImageType,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    params: ImageUploadParams,
+    options?: RequestOptions,
+  ): APIPromise<void> {
+    const { Id, Index } = params;
     return this._client.post(path`/Items/${Id}/Images/${type}`, {
-      query: { Index },
       body: body,
+      query: { Index },
       ...options,
       headers: buildHeaders([
         { 'Content-Type': 'application/octet-stream', Accept: '*/*' },
@@ -146,10 +151,11 @@ export class Images extends APIResource {
    */
   uploadByTypeAndIndex(
     index: number,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     params: ImageUploadByTypeAndIndexParams,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { Id, Type, body } = params;
+    const { Id, Type } = params;
     return this._client.post(path`/Items/${Id}/Images/${Type}/${index}`, {
       body: body,
       ...options,
@@ -528,11 +534,6 @@ export interface ImageUploadParams {
   Id: string;
 
   /**
-   * Body param:
-   */
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-
-  /**
    * Query param: Image Index
    */
   Index?: number;
@@ -548,11 +549,6 @@ export interface ImageUploadByTypeAndIndexParams {
    * Path param: Image Type
    */
   Type: ImageType;
-
-  /**
-   * Body param:
-   */
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
 }
 
 export declare namespace Images {

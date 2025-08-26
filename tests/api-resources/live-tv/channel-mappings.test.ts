@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource channelMappings', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.liveTv.channelMappings.create({ ProviderId: 'ProviderId' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource channelMappings', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.liveTv.channelMappings.create({
       ProviderId: 'ProviderId',
@@ -29,7 +29,7 @@ describe('resource channelMappings', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.liveTv.channelMappings.update({ ProviderId: 'ProviderId' });
     const rawResponse = await responsePromise.asResponse();
@@ -41,7 +41,7 @@ describe('resource channelMappings', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.liveTv.channelMappings.update({
       ProviderId: 'ProviderId',
@@ -50,7 +50,7 @@ describe('resource channelMappings', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: only required params', async () => {
     const responsePromise = client.liveTv.channelMappings.list({ ProviderId: 'ProviderId' });
     const rawResponse = await responsePromise.asResponse();
@@ -62,12 +62,12 @@ describe('resource channelMappings', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: required and optional params', async () => {
     const response = await client.liveTv.channelMappings.list({ ProviderId: 'ProviderId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.liveTv.channelMappings.delete({ ProviderId: 'ProviderId' });
     const rawResponse = await responsePromise.asResponse();
@@ -79,7 +79,7 @@ describe('resource channelMappings', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.liveTv.channelMappings.delete({ ProviderId: 'ProviderId' });
   });

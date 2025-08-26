@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.3.0 (2025-08-23)
+
+Full Changelog: [v0.2.1...v0.3.0](https://github.com/sqzw-x/emby-typescript/compare/v0.2.1...v0.3.0)
+
+### Features
+
+* **mcp:** add code execution tool ([0e31543](https://github.com/sqzw-x/emby-typescript/commit/0e31543cd37407572950df94f84d904c38376d39))
+
+
+### Bug Fixes
+
+* **methods:** define methods with parameters and binary body correctly ([2c150dd](https://github.com/sqzw-x/emby-typescript/commit/2c150dd62fce69dfb7d86754352c8233145181ef))
+
+
+### Chores
+
+* add package to package.json ([71d177e](https://github.com/sqzw-x/emby-typescript/commit/71d177e487beaf0f8ac5a6f7c7b350b28c0f3f4a))
+* **client:** qualify global Blob ([495907a](https://github.com/sqzw-x/emby-typescript/commit/495907a9095553ae1c51727304f983167bf985a9))
+* **deps:** update dependency @types/node to v20.17.58 ([79ba8f1](https://github.com/sqzw-x/emby-typescript/commit/79ba8f1c9e17847d0c654e7d1a8368d6ec4ce995))
+* **internal:** codegen related update ([59cd3f6](https://github.com/sqzw-x/emby-typescript/commit/59cd3f63dfb2f1e620680efffe584f0e6994f6ed))
+* **internal:** codegen related update ([1418e11](https://github.com/sqzw-x/emby-typescript/commit/1418e115304e13f2603bc205a05071cb4c491444))
+* **internal:** formatting change ([8d52d68](https://github.com/sqzw-x/emby-typescript/commit/8d52d68ef6d9e75c63682bce0d95d7863929a045))
+* **internal:** move publish config ([d2e2b57](https://github.com/sqzw-x/emby-typescript/commit/d2e2b5723bc1a2d659fb08b4a74268f2de766c1b))
+* **internal:** remove redundant imports config ([dc887cf](https://github.com/sqzw-x/emby-typescript/commit/dc887cf36e9f266c2322036f985d5b225a422a9d))
+* **internal:** update comment in script ([dcad941](https://github.com/sqzw-x/emby-typescript/commit/dcad941a86d377c7ae9239bd819ca3f203ccacf9))
+* update @stainless-api/prism-cli to v5.15.0 ([cc2aea6](https://github.com/sqzw-x/emby-typescript/commit/cc2aea6b0d47aa099a601d1eb80de36c9353873a))
+* update CI script ([b122c2f](https://github.com/sqzw-x/emby-typescript/commit/b122c2fe76206048c7c72bd92ffeababc45712aa))
+
 ## 0.2.1 (2025-07-17)
 
 Full Changelog: [v0.2.0...v0.2.1](https://github.com/sqzw-x/emby-typescript/compare/v0.2.0...v0.2.1)

@@ -40,10 +40,9 @@ export class Configuration extends APIResource {
    */
   updateNamed(
     key: string,
-    params: ConfigurationUpdateNamedParams,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { body } = params;
     return this._client.post(path`/System/Configuration/${key}`, {
       body: body,
       ...options,
@@ -57,8 +56,10 @@ export class Configuration extends APIResource {
   /**
    * Requires authentication as administrator
    */
-  updatePartial(params: ConfigurationUpdatePartialParams, options?: RequestOptions): APIPromise<void> {
-    const { body } = params;
+  updatePartial(
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    options?: RequestOptions,
+  ): APIPromise<void> {
     return this._client.post('/System/Configuration/Partial', {
       body: body,
       ...options,
@@ -408,19 +409,9 @@ export namespace ConfigurationUpdateParams {
   }
 }
 
-export interface ConfigurationUpdateNamedParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
-export interface ConfigurationUpdatePartialParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
 export declare namespace Configuration {
   export {
     type ServerConfiguration as ServerConfiguration,
     type ConfigurationUpdateParams as ConfigurationUpdateParams,
-    type ConfigurationUpdateNamedParams as ConfigurationUpdateNamedParams,
-    type ConfigurationUpdatePartialParams as ConfigurationUpdatePartialParams,
   };
 }

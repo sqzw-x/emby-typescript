@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource services', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('getDefaults', async () => {
     const responsePromise = client.notifications.services.getDefaults();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource services', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('sendTest', async () => {
     const responsePromise = client.notifications.services.sendTest({});
     const rawResponse = await responsePromise.asResponse();

@@ -16,11 +16,15 @@ export class CameraUploads extends APIResource {
   /**
    * Requires authentication as user
    */
-  upload(params: CameraUploadUploadParams, options?: RequestOptions): APIPromise<void> {
-    const { Album, Id, Name, body } = params;
+  upload(
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    params: CameraUploadUploadParams,
+    options?: RequestOptions,
+  ): APIPromise<void> {
+    const { Album, Id, Name } = params;
     return this._client.post('/Devices/CameraUploads', {
-      query: { Album, Id, Name },
       body: body,
+      query: { Album, Id, Name },
       ...options,
       headers: buildHeaders([
         { 'Content-Type': 'application/octet-stream', Accept: '*/*' },
@@ -63,11 +67,6 @@ export interface CameraUploadUploadParams {
    * Query param: Name
    */
   Name: string;
-
-  /**
-   * Body param:
-   */
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
 }
 
 export declare namespace CameraUploads {

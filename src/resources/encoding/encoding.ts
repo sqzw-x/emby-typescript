@@ -86,13 +86,14 @@ export class Encoding extends APIResource {
    * Requires authentication as administrator
    */
   updateCodecParameters(
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     params: EncodingUpdateCodecParametersParams,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { CodecId, ParameterContext, body } = params;
+    const { CodecId, ParameterContext } = params;
     return this._client.post('/Encoding/CodecParameters', {
-      query: { CodecId, ParameterContext },
       body: body,
+      query: { CodecId, ParameterContext },
       ...options,
       headers: buildHeaders([
         { 'Content-Type': 'application/octet-stream', Accept: '*/*' },
@@ -104,8 +105,10 @@ export class Encoding extends APIResource {
   /**
    * Requires authentication as administrator
    */
-  updateFfmpegOptions(params: EncodingUpdateFfmpegOptionsParams, options?: RequestOptions): APIPromise<void> {
-    const { body } = params;
+  updateFfmpegOptions(
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    options?: RequestOptions,
+  ): APIPromise<void> {
     return this._client.post('/Encoding/FfmpegOptions', {
       body: body,
       ...options,
@@ -120,10 +123,9 @@ export class Encoding extends APIResource {
    * Requires authentication as administrator
    */
   updateFullToneMapOptions(
-    params: EncodingUpdateFullToneMapOptionsParams,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { body } = params;
     return this._client.post('/Encoding/FullToneMapOptions', {
       body: body,
       ...options,
@@ -138,10 +140,9 @@ export class Encoding extends APIResource {
    * Requires authentication as administrator
    */
   updatePublicToneMapOptions(
-    params: EncodingUpdatePublicToneMapOptionsParams,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { body } = params;
     return this._client.post('/Encoding/PublicToneMapOptions', {
       body: body,
       ...options,
@@ -156,10 +157,9 @@ export class Encoding extends APIResource {
    * Requires authentication as administrator
    */
   updateSubtitleOptions(
-    params: EncodingUpdateSubtitleOptionsParams,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
     options?: RequestOptions,
   ): APIPromise<void> {
-    const { body } = params;
     return this._client.post('/Encoding/SubtitleOptions', {
       body: body,
       ...options,
@@ -759,27 +759,6 @@ export interface EncodingUpdateCodecParametersParams {
    * Query param: Parameter Context
    */
   ParameterContext: CodecParametersAPI.CodecParameterContext;
-
-  /**
-   * Body param:
-   */
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
-export interface EncodingUpdateFfmpegOptionsParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
-export interface EncodingUpdateFullToneMapOptionsParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
-export interface EncodingUpdatePublicToneMapOptionsParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
-}
-
-export interface EncodingUpdateSubtitleOptionsParams {
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
 }
 
 Encoding.FullToneMapOptions = FullToneMapOptions;
@@ -793,10 +772,6 @@ export declare namespace Encoding {
     type EncodingGetToneMapOptionsResponse as EncodingGetToneMapOptionsResponse,
     type EncodingGetCodecParametersParams as EncodingGetCodecParametersParams,
     type EncodingUpdateCodecParametersParams as EncodingUpdateCodecParametersParams,
-    type EncodingUpdateFfmpegOptionsParams as EncodingUpdateFfmpegOptionsParams,
-    type EncodingUpdateFullToneMapOptionsParams as EncodingUpdateFullToneMapOptionsParams,
-    type EncodingUpdatePublicToneMapOptionsParams as EncodingUpdatePublicToneMapOptionsParams,
-    type EncodingUpdateSubtitleOptionsParams as EncodingUpdateSubtitleOptionsParams,
   };
 
   export {

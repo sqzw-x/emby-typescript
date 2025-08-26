@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource remoteSearch', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('applySearch', async () => {
     const responsePromise = client.items.remoteSearch.applySearch('Id', {});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource remoteSearch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createBook', async () => {
     const responsePromise = client.items.remoteSearch.createBook({});
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource remoteSearch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createBoxSet', async () => {
     const responsePromise = client.items.remoteSearch.createBoxSet({});
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource remoteSearch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createGame', async () => {
     const responsePromise = client.items.remoteSearch.createGame({});
     const rawResponse = await responsePromise.asResponse();
@@ -56,7 +56,7 @@ describe('resource remoteSearch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createMovie', async () => {
     const responsePromise = client.items.remoteSearch.createMovie({});
     const rawResponse = await responsePromise.asResponse();
@@ -68,7 +68,7 @@ describe('resource remoteSearch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createMusicAlbum', async () => {
     const responsePromise = client.items.remoteSearch.createMusicAlbum({});
     const rawResponse = await responsePromise.asResponse();
@@ -80,7 +80,7 @@ describe('resource remoteSearch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createMusicArtist', async () => {
     const responsePromise = client.items.remoteSearch.createMusicArtist({});
     const rawResponse = await responsePromise.asResponse();
@@ -92,7 +92,7 @@ describe('resource remoteSearch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createMusicVideo', async () => {
     const responsePromise = client.items.remoteSearch.createMusicVideo({});
     const rawResponse = await responsePromise.asResponse();
@@ -104,7 +104,7 @@ describe('resource remoteSearch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createPerson', async () => {
     const responsePromise = client.items.remoteSearch.createPerson({});
     const rawResponse = await responsePromise.asResponse();
@@ -116,7 +116,7 @@ describe('resource remoteSearch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createSeries', async () => {
     const responsePromise = client.items.remoteSearch.createSeries({});
     const rawResponse = await responsePromise.asResponse();
@@ -128,7 +128,7 @@ describe('resource remoteSearch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('createTrailer', async () => {
     const responsePromise = client.items.remoteSearch.createTrailer({});
     const rawResponse = await responsePromise.asResponse();
@@ -140,7 +140,7 @@ describe('resource remoteSearch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveImage: only required params', async () => {
     const responsePromise = client.items.remoteSearch.retrieveImage({
       ImageUrl: 'ImageUrl',
@@ -155,7 +155,7 @@ describe('resource remoteSearch', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveImage: required and optional params', async () => {
     const response = await client.items.remoteSearch.retrieveImage({
       ImageUrl: 'ImageUrl',

@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource items', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.playlists.items.list('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -41,7 +41,7 @@ describe('resource items', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: only required params', async () => {
     const responsePromise = client.playlists.items.delete('Id', { EntryIds: 'EntryIds' });
     const rawResponse = await responsePromise.asResponse();
@@ -53,12 +53,12 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete: required and optional params', async () => {
     const response = await client.playlists.items.delete('Id', { EntryIds: 'EntryIds' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('add: only required params', async () => {
     const responsePromise = client.playlists.items.add('Id', { Ids: 'Ids' });
     const rawResponse = await responsePromise.asResponse();
@@ -70,12 +70,12 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('add: required and optional params', async () => {
     const response = await client.playlists.items.add('Id', { Ids: 'Ids', UserId: 'UserId' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('move: only required params', async () => {
     const responsePromise = client.playlists.items.move(0, { Id: 'Id', ItemId: 0 });
     const rawResponse = await responsePromise.asResponse();
@@ -87,12 +87,12 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('move: required and optional params', async () => {
     const response = await client.playlists.items.move(0, { Id: 'Id', ItemId: 0 });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('remove: only required params', async () => {
     const responsePromise = client.playlists.items.remove('Id', { EntryIds: 'EntryIds' });
     const rawResponse = await responsePromise.asResponse();
@@ -104,7 +104,7 @@ describe('resource items', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('remove: required and optional params', async () => {
     const response = await client.playlists.items.remove('Id', { EntryIds: 'EntryIds' });
   });

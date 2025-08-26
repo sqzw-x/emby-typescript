@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource cameraUploads', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.devices.cameraUploads.list();
     const rawResponse = await responsePromise.asResponse();
@@ -20,14 +20,12 @@ describe('resource cameraUploads', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('upload: only required params', async () => {
-    const responsePromise = client.devices.cameraUploads.upload({
-      Album: 'Album',
-      Id: 'Id',
-      Name: 'Name',
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+    const responsePromise = client.devices.cameraUploads.upload(
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+      { Album: 'Album', Id: 'Id', Name: 'Name' },
+    );
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -37,13 +35,11 @@ describe('resource cameraUploads', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('upload: required and optional params', async () => {
-    const response = await client.devices.cameraUploads.upload({
-      Album: 'Album',
-      Id: 'Id',
-      Name: 'Name',
-      body: await toFile(Buffer.from('# my file contents'), 'README.md'),
-    });
+    const response = await client.devices.cameraUploads.upload(
+      await toFile(Buffer.from('# my file contents'), 'README.md'),
+      { Album: 'Album', Id: 'Id', Name: 'Name' },
+    );
   });
 });

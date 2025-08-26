@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource notifications', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listTypes', async () => {
     const responsePromise = client.notifications.listTypes();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource notifications', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('sendToAdmin: only required params', async () => {
     const responsePromise = client.notifications.sendToAdmin({ Description: 'Description', Name: 'Name' });
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource notifications', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('sendToAdmin: required and optional params', async () => {
     const response = await client.notifications.sendToAdmin({
       Description: 'Description',

@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource audio', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveHlsSegment: only required params', async () => {
     const responsePromise = client.audio.retrieveHlsSegment('SegmentContainer', {
       Id: 'Id',
@@ -24,7 +24,7 @@ describe('resource audio', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveHlsSegment: required and optional params', async () => {
     const response = await client.audio.retrieveHlsSegment('SegmentContainer', {
       Id: 'Id',
@@ -33,7 +33,7 @@ describe('resource audio', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveHls1Segment: only required params', async () => {
     const responsePromise = client.audio.retrieveHls1Segment('SegmentContainer', {
       Id: 'Id',
@@ -49,7 +49,7 @@ describe('resource audio', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveHls1Segment: required and optional params', async () => {
     const response = await client.audio.retrieveHls1Segment('SegmentContainer', {
       Id: 'Id',
@@ -58,7 +58,7 @@ describe('resource audio', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveLiveStream: only required params', async () => {
     const responsePromise = client.audio.retrieveLiveStream('Id', { Container: 'Container' });
     const rawResponse = await responsePromise.asResponse();
@@ -70,7 +70,7 @@ describe('resource audio', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveLiveStream: required and optional params', async () => {
     const response = await client.audio.retrieveLiveStream('Id', {
       Container: 'Container',
@@ -99,7 +99,7 @@ describe('resource audio', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveMainStream: only required params', async () => {
     const responsePromise = client.audio.retrieveMainStream('Id', { Container: 'Container' });
     const rawResponse = await responsePromise.asResponse();
@@ -111,7 +111,7 @@ describe('resource audio', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveMainStream: required and optional params', async () => {
     const response = await client.audio.retrieveMainStream('Id', {
       Container: 'Container',
@@ -140,7 +140,7 @@ describe('resource audio', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveMasterStream: only required params', async () => {
     const responsePromise = client.audio.retrieveMasterStream('Id', { Container: 'Container' });
     const rawResponse = await responsePromise.asResponse();
@@ -152,7 +152,7 @@ describe('resource audio', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveMasterStream: required and optional params', async () => {
     const response = await client.audio.retrieveMasterStream('Id', {
       Container: 'Container',
@@ -181,7 +181,7 @@ describe('resource audio', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveStreamFile: only required params', async () => {
     const responsePromise = client.audio.retrieveStreamFile('StreamFileName', {
       Id: 'Id',
@@ -196,7 +196,7 @@ describe('resource audio', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveStreamFile: required and optional params', async () => {
     const response = await client.audio.retrieveStreamFile('StreamFileName', {
       Id: 'Id',

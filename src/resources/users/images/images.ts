@@ -27,8 +27,13 @@ export class Images extends APIResource {
   /**
    * Requires authentication as user
    */
-  update(index: number, params: ImageUpdateParams, options?: RequestOptions): APIPromise<void> {
-    const { Id, Type, body } = params;
+  update(
+    index: number,
+    body: string | ArrayBuffer | ArrayBufferView | Blob | DataView,
+    params: ImageUpdateParams,
+    options?: RequestOptions,
+  ): APIPromise<void> {
+    const { Id, Type } = params;
     return this._client.post(path`/Users/${Id}/Images/${Type}/${index}`, {
       body: body,
       ...options,
@@ -131,11 +136,6 @@ export interface ImageUpdateParams {
    * Path param: Image Type
    */
   Type: ImagesAPI.ImageType;
-
-  /**
-   * Body param:
-   */
-  body: string | ArrayBuffer | ArrayBufferView | Blob | DataView;
 }
 
 Images.Delete = Delete;

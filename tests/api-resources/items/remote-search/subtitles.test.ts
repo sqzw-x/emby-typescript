@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource subtitles', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('add: only required params', async () => {
     const responsePromise = client.items.remoteSearch.subtitles.add('SubtitleId', {
       Id: 'Id',
@@ -23,7 +23,7 @@ describe('resource subtitles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('add: required and optional params', async () => {
     const response = await client.items.remoteSearch.subtitles.add('SubtitleId', {
       Id: 'Id',
@@ -31,7 +31,7 @@ describe('resource subtitles', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveByLanguage: only required params', async () => {
     const responsePromise = client.items.remoteSearch.subtitles.retrieveByLanguage('Language', {
       Id: 'Id',
@@ -46,7 +46,7 @@ describe('resource subtitles', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieveByLanguage: required and optional params', async () => {
     const response = await client.items.remoteSearch.subtitles.retrieveByLanguage('Language', {
       Id: 'Id',

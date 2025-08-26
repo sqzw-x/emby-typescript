@@ -2,7 +2,7 @@
 
 import { APIResource } from '../../core/resource';
 import * as ConfigurationAPI from './configuration';
-import { Configuration, ConfigurationUpdateParams } from './configuration';
+import { Configuration } from './configuration';
 import { APIPromise } from '../../core/api-promise';
 import { buildHeaders } from '../../internal/headers';
 import { RequestOptions } from '../../internal/request-options';
@@ -72,5 +72,5 @@ Plugins.Configuration = Configuration;
 export declare namespace Plugins {
   export { type PluginListResponse as PluginListResponse };
 
-  export { Configuration as Configuration, type ConfigurationUpdateParams as ConfigurationUpdateParams };
+  export { Configuration as Configuration };
 }

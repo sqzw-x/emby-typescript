@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource paths', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.libraries.virtualFolders.paths.create({});
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource paths', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.libraries.virtualFolders.paths.update({});
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource paths', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.libraries.virtualFolders.paths.delete();
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource paths', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deletePath', async () => {
     const responsePromise = client.libraries.virtualFolders.paths.deletePath({});
     const rawResponse = await responsePromise.asResponse();

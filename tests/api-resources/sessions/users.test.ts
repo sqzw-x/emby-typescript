@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource users', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('addUser: only required params', async () => {
     const responsePromise = client.sessions.users.addUser('UserId', { Id: 'Id' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,12 +20,12 @@ describe('resource users', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('addUser: required and optional params', async () => {
     const response = await client.sessions.users.addUser('UserId', { Id: 'Id' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteUser: only required params', async () => {
     const responsePromise = client.sessions.users.deleteUser('UserId', { Id: 'Id' });
     const rawResponse = await responsePromise.asResponse();
@@ -37,12 +37,12 @@ describe('resource users', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('deleteUser: required and optional params', async () => {
     const response = await client.sessions.users.deleteUser('UserId', { Id: 'Id' });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('removeUser: only required params', async () => {
     const responsePromise = client.sessions.users.removeUser('UserId', { Id: 'Id' });
     const rawResponse = await responsePromise.asResponse();
@@ -54,7 +54,7 @@ describe('resource users', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('removeUser: required and optional params', async () => {
     const response = await client.sessions.users.removeUser('UserId', { Id: 'Id' });
   });

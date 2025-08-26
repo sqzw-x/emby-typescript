@@ -8,7 +8,7 @@ const client = new Emby({
 });
 
 describe('resource recordings', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.liveTv.recordings.retrieve('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource recordings', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -28,7 +28,7 @@ describe('resource recordings', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.liveTv.recordings.list();
     const rawResponse = await responsePromise.asResponse();
@@ -40,7 +40,7 @@ describe('resource recordings', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -153,7 +153,7 @@ describe('resource recordings', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.liveTv.recordings.delete('Id');
     const rawResponse = await responsePromise.asResponse();
@@ -165,7 +165,7 @@ describe('resource recordings', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listFolders', async () => {
     const responsePromise = client.liveTv.recordings.listFolders();
     const rawResponse = await responsePromise.asResponse();
@@ -177,7 +177,7 @@ describe('resource recordings', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listFolders: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -195,7 +195,7 @@ describe('resource recordings', () => {
     ).rejects.toThrow(Emby.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listGroups', async () => {
     const responsePromise = client.liveTv.recordings.listGroups();
     const rawResponse = await responsePromise.asResponse();
@@ -207,7 +207,7 @@ describe('resource recordings', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('listSeries', async () => {
     const responsePromise = client.liveTv.recordings.listSeries();
     const rawResponse = await responsePromise.asResponse();
