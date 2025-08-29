@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.1 (2025-08-29)
+
+Full Changelog: [v0.3.0...v0.3.1](https://github.com/sqzw-x/emby-typescript/compare/v0.3.0...v0.3.1)
+
+### Chores
+
+* **internal:** update global Error reference ([4d8fb5b](https://github.com/sqzw-x/emby-typescript/commit/4d8fb5be42c07d5a136ef57f1c238927021bb529))
+
 ## 0.3.0 (2025-08-23)
 
 Full Changelog: [v0.2.1...v0.3.0](https://github.com/sqzw-x/emby-typescript/compare/v0.2.1...v0.3.0)
