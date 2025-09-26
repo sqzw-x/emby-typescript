@@ -7,10 +7,9 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "baseUrl": "./",
     "paths": {
-      "emby-sdk-stainless/*": ["src/*"],
-      "emby-sdk-stainless": ["src/index.ts"]
+      "emby-sdk-stainless/*": ["./src/*"],
+      "emby-sdk-stainless": ["./src/index.ts"]
     },
     "noEmit": true,
 
