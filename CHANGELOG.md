@@ -1,5 +1,32 @@
 # Changelog
 
+## 0.3.1 (2025-10-07)
+
+Full Changelog: [v0.3.0...v0.3.1](https://github.com/sqzw-x/emby-typescript/compare/v0.3.0...v0.3.1)
+
+### Bug Fixes
+
+* coerce nullable values to undefined ([3699579](https://github.com/sqzw-x/emby-typescript/commit/3699579d08fe054ec4de06b6363722eb1b2a03fd))
+
+
+### Performance Improvements
+
+* faster formatting ([51f81c3](https://github.com/sqzw-x/emby-typescript/commit/51f81c34238d43513d8de2797ca485d74ff37dca))
+
+
+### Chores
+
+* ci build action ([01823f2](https://github.com/sqzw-x/emby-typescript/commit/01823f2e5687ad08e62770455e44adba8a40b098))
+* do not install brew dependencies in ./scripts/bootstrap by default ([3fdf435](https://github.com/sqzw-x/emby-typescript/commit/3fdf4352f6420339bce797d4c0f3498e4af3a447))
+* **internal:** codegen related update ([b84f2de](https://github.com/sqzw-x/emby-typescript/commit/b84f2de073865ff89908e47d7939dcf7771a706b))
+* **internal:** fix incremental formatting in some cases ([2e85185](https://github.com/sqzw-x/emby-typescript/commit/2e8518544075238b82c91fcd1859011692e2661c))
+* **internal:** ignore .eslintcache ([2c7072e](https://github.com/sqzw-x/emby-typescript/commit/2c7072e28630fbd47229304f63b83a1345249f04))
+* **internal:** remove .eslintcache ([53a9c58](https://github.com/sqzw-x/emby-typescript/commit/53a9c58390f3e81cb0f1480cd26e5cce6b834c7f))
+* **internal:** remove deprecated `compilerOptions.baseUrl` from tsconfig.json ([ba9655f](https://github.com/sqzw-x/emby-typescript/commit/ba9655f7936024da227e836277c246f7b6151f1a))
+* **internal:** update global Error reference ([4d8fb5b](https://github.com/sqzw-x/emby-typescript/commit/4d8fb5be42c07d5a136ef57f1c238927021bb529))
+* **internal:** use npm pack for build uploads ([ad9e2bc](https://github.com/sqzw-x/emby-typescript/commit/ad9e2bc8df2fbc341360e67eba8db393d56ba904))
+* **jsdoc:** fix [@link](https://github.com/link) annotations to refer only to parts of the package‘s public interface ([467ae8c](https://github.com/sqzw-x/emby-typescript/commit/467ae8ca12c4090e46dc0232a1d9fe892bd85678))
+
 ## 0.3.0 (2025-08-23)
 
 Full Changelog: [v0.2.1...v0.3.0](https://github.com/sqzw-x/emby-typescript/compare/v0.2.1...v0.3.0)
