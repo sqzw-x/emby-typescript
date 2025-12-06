@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.3.2 (2025-12-06)
+
+Full Changelog: [v0.3.1...v0.3.2](https://github.com/sqzw-x/emby-typescript/compare/v0.3.1...v0.3.2)
+
+### Bug Fixes
+
+* **mcp:** correct code tool API endpoint ([5a837fb](https://github.com/sqzw-x/emby-typescript/commit/5a837fbe9d6f9e4b106aab51fd517ac0e20b6dda))
+* **mcp:** return correct lines on typescript errors ([5d17409](https://github.com/sqzw-x/emby-typescript/commit/5d174091942e4356a75d8b81d258a035f82fe101))
+
+
+### Chores
+
+* **client:** fix logger property type ([6234510](https://github.com/sqzw-x/emby-typescript/commit/6234510c499b5fae117fcf4d5b722e2685e4cc31))
+* **internal:** codegen related update ([0923ab6](https://github.com/sqzw-x/emby-typescript/commit/0923ab6f8b5578177d9cfeff69899b969ff35407))
+* **internal:** codegen related update ([751e80b](https://github.com/sqzw-x/emby-typescript/commit/751e80bfa45d1064452ef0d54909b4ddb3fe098f))
+* **internal:** upgrade eslint ([eb2de37](https://github.com/sqzw-x/emby-typescript/commit/eb2de37c386fe989f8d7e0713cbd17698dc02e2f))
+
 ## 0.3.1 (2025-10-07)
 
 Full Changelog: [v0.3.0...v0.3.1](https://github.com/sqzw-x/emby-typescript/compare/v0.3.0...v0.3.1)
